@@ -1,4 +1,4 @@
-function decorateAccordion(el) {
+export default function init(el) {
     const titles = el.querySelectorAll(':scope > div:nth-child(odd)');
     titles.forEach((title) => {
       // Add a class to the title container
@@ -13,8 +13,3 @@ function decorateAccordion(el) {
       });
     });
   }
-  
-  const els = document.querySelectorAll('.accordion');
-  els.forEach((el) => {
-    decorateAccordion(el);
-  });
