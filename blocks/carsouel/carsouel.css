@@ -1,0 +1,61 @@
+/* block specific CSS goes here */
+
+.herocarousel-container .herocarousel-wrapper {
+    max-width: unset;
+  }
+    
+  main .herocarousel-container {
+    padding: 0;
+  }
+    
+  .herocarousel {
+    position: relative;
+    height: 100vh;
+    font-size: 48px;
+    font-style: italic;
+  }
+
+  .herocarousel > div,
+  .herocarousel > div > div:first-child {
+    height: 100%;
+  }
+
+  .herocarousel > div > div:nth-child(2n) {
+    position: absolute;
+    max-width: 40%;
+    bottom: 15%;
+    left: 15%;
+    color: white;
+    background: #7c6060;
+    padding: 20px;
+  }
+
+  .herocarousel picture {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+  
+  .herocarousel h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    color: white;
+    left:17%;
+    font-size: 20px;
+  }
+  
+  @media (min-width: 600px) {
+    .herocarousel h1 {
+      font-size: 48px;
+    }
+  }
+  
+  
+  
+  .herocarousel img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
