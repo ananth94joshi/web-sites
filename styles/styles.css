@@ -235,3 +235,13 @@ main .section[data-section-status='initialized'] {
 main .section.highlight {
   background-color: var(--highlight-background-color);
 }
+
+
+h1#aj-yoga-center {
+    background: blueviolet;
+    width: 40%;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 0px;
+}
+
