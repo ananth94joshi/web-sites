@@ -1,155 +1,120 @@
-/*
- * tabs - consonant v5.1
- * https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role
- */
-import { createTag } from '../../scripts/scripts.js';
+import { loadBlocks } from '../../scripts/lib-franklin.js';
+import { decorateMain } from '../../scripts/scripts.js';
 
-export const isElementInContainerView = (targetEl) => {
-  const rect = targetEl.getBoundingClientRect();
-  return (
-    rect.top >= 0
-    && rect.left >= 0
-    && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-    && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
-
-export const scrollTabIntoView = (e) => {
-  const isElInView = isElementInContainerView(e);
-
-  /* c8 ignore next */
-  if (!isElInView) e.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-};
-
-export function changeTabs(e) {
-  const { target } = e;
-  const parent = target.parentNode;
-  const grandparent = parent.parentNode.nextElementSibling;
-  parent
-    .querySelectorAll('[aria-selected="true"]')
-    .forEach((t) => t.setAttribute('aria-selected', false));
-  target.setAttribute('aria-selected', true);
-  scrollTabIntoView(target);
-  grandparent
-    .querySelectorAll('[role="tabpanel"]')
-    .forEach((p) => p.classList.remove('active'));
-  grandparent.parentNode
-    .querySelector(`#${target.getAttribute('aria-controls')}`)
-    .classList.add('active');
+async function generateTabMainBlock(html) {
+  const main = document.createElement('main');
+  main.innerHTML = html;
+  decorateMain(main);
+  await loadBlocks(main);
+  return main;
 }
 
-export function initTabs(e) {
-  const tabs = e.querySelectorAll('[role="tab"]');
-  const tabLists = e.querySelectorAll('[role="tablist"]');
-  tabLists.forEach((tabList) => {
-    let tabFocus = 0;
-    tabList.addEventListener('keydown', (p) => {
-      if (p.key === 'ArrowRight' || p.key === 'ArrowLeft') {
-        tabs[tabFocus].setAttribute('tabindex', -1);
-        if (p.key === 'ArrowRight') {
-          tabFocus += 1;
-          /* c8 ignore next */
-          if (tabFocus >= tabs.length) tabFocus = 0;
-        } else if (e.key === 'ArrowLeft') {
-          tabFocus -= 1;
-          /* c8 ignore next */
-          if (tabFocus < 0) tabFocus = tabs.length - 1;
-        }
-        tabs[tabFocus].setAttribute('tabindex', 0);
-        tabs[tabFocus].focus();
-      }
-    });
-  });
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', changeTabs);
-  });
-}
-
-let initCount = 0;
-const init = (e) => {
-  const rows = e.querySelectorAll(':scope > div');
-  let tabPos = '';
-  /* c8 ignore next */
-  if (!rows.length) return;
-
-  // Tab Content
-  const tabContentContainer = createTag('div', { class: 'tabcontent-container' });
-  const tabContent = createTag('div', { class: 'tabcontent' }, tabContentContainer);
-  e.append(tabContent);
-
-  // Tab List
-  const tabList = rows[0];
-  const tabId = `tabs-${initCount}`;
-  e.id = tabId;
-  tabList.classList.add('tabList');
-  tabList.setAttribute('role', 'tablist');
-  const tabListContainer = tabList.querySelector(':scope > div');
-  tabListContainer.classList.add('tablist-container');
-
-  const tabListItems = rows[0].querySelectorAll(':scope li');
-  if (tabListItems) {
-    const btnClass = [...e.classList].includes('quiet') ? 'heading-XS' : 'heading-XS';
-    tabListItems.forEach((item, i) => {
-      item[i] = `tab${i}`;
-      const tabName = item[i];
-      const tabBtnAttributes = {
-        role: 'tab',
-        class: btnClass,
-        id: `tab-${initCount}-${tabName}`,
-        tabindex: (i > 0) ? '0' : '-1',
-        'aria-selected': (i === 0) ? 'true' : 'false',
-        'aria-controls': `tab-panel-${initCount}-${tabName}`,
-        'aria-label': item.textContent ? item.textContent.trim() : tabName,
-        'data-tab-id': i,
-      };
-      const tabBtn = createTag('button', tabBtnAttributes);
-      tabBtn.innerText = item.textContent;
-
-      // support image in tabs for tabs.image-based
-      if (e.classList.contains('image-based')) {
-        const img = item.querySelector('picture');
-        if (img) {
-          tabBtn.innerHTML = '';
-          tabBtn.append(img);
-        }
-      }
-      tabListContainer.append(tabBtn);
-
-      const tabContentAttributes = {
-        id: `tab-panel-${initCount}-${tabName}`,
-        role: 'tabpanel',
-        class: 'tabpanel',
-        tabindex: '0',
-        'aria-labelledby': `tab-${initCount}-${tabName}`,
-      };
-      const tabListContent = createTag('div', tabContentAttributes);
-      tabListContent.setAttribute('aria-labelledby', `tab-${initCount}-${tabName}`);
-      // default first tab is active
-      if (i === 0) tabListContent.classList.add('active');
-
-      tabContentContainer.append(tabListContent);
-    });
-    tabListItems[0].parentElement.remove();
+const HASH_REGEX = /tabs--(.*)--(.*)/;
+const HASH_SCROLL_POLL_INTERVAL_DELAY_IN_MILLI_SECONDS = 20;
+function decodeHashToObject() {
+  if (!window.location.hash || window.location.hash.length < 3) {
+    return null;
   }
 
-  const tabContents = [];
+  const base = decodeURI(window.location.hash.slice(1));
+  const matches = base.match(HASH_REGEX);
+  if (matches) {
+    return {
+      tabMatches: (title, index) => matches[2] === title && parseFloat(matches[1]) === index,
+      tabsComponentMatches: (index) => parseFloat(matches[1]) === index,
+    };
+  }
 
-  // Tab Sections
-  const allSections = Array.from(document.querySelectorAll('div.section'));
-  allSections.forEach((x) => {
-    if (x.className.includes('tab-')) {
-      tabContents.push(x);
+  return null;
+}
+
+function generateHiddenInput(tabSectionIndex, presentTabContents, block) {
+  const hashObj = decodeHashToObject();
+  for (let i = presentTabContents.length - 1; i > -1; i -= 1) {
+    const { tabTitle } = presentTabContents[i].dataset;
+    const input = document.createElement('input');
+
+    input.setAttribute('type', 'radio');
+    input.setAttribute('id', `tab-${tabSectionIndex}-${i}`);
+    input.setAttribute('name', `tabs-${tabSectionIndex}`);
+
+    if (
+      (hashObj && hashObj.tabMatches(tabTitle, tabSectionIndex))
+        || ((!hashObj || !hashObj.tabsComponentMatches(tabSectionIndex)) && i === 0)
+    ) {
+      input.setAttribute('checked', true);
     }
-  });
+    block.prepend(input);
+  }
+}
 
-  tabContents.forEach((y, i) => {
-    tabPos = `tab${i}`;
-    y.removeAttribute('data-section-status');
-    y.remove();
-    const assocTabItem = document.getElementById(`tab-panel-${initCount}-${tabPos}`);
-    if (assocTabItem) assocTabItem.append(y);
+function generateTabNav(tabSectionIndex, presentTabContents) {
+  const ul = document.createElement('ul');
+  ul.setAttribute('class', 'tabs-control');
+
+  presentTabContents.forEach((tabContent, index) => {
+    const { tabTitle } = tabContent.dataset;
+    const li = document.createElement('li');
+    li.setAttribute('class', 'tab');
+
+    const label = document.createElement('label');
+    label.setAttribute('for', `tab-${tabSectionIndex}-${index}`);
+
+    const h2 = document.createElement('h2');
+
+    const a = document.createElement('a');
+    a.innerHTML = tabTitle;
+    h2.append(a);
+    label.append(h2);
+    li.append(label);
+
+    li.addEventListener('click', () => {
+      // eslint-disable-next-line no-restricted-globals
+      history.replaceState(undefined, undefined, `#tabs--${tabSectionIndex}--${tabTitle}`);
+    });
+
+    ul.append(li);
   });
-  initTabs(e);
-  initCount += 1;
-};
-export default init;
+  return ul;
+}
+
+export default async function decorate(block) {
+  const presentTabContents = [...block.querySelectorAll(':scope > div.contents-wrapper > div.contents')];
+
+  if (presentTabContents && presentTabContents.length > 0) {
+    const tabSectionIndex = [...block.closest('main').childNodes].indexOf(block.closest('.section'));
+
+    block.prepend(generateTabNav(tabSectionIndex, presentTabContents));
+    generateHiddenInput(tabSectionIndex, presentTabContents, block);
+
+    const hashObj = decodeHashToObject();
+
+    const promises = presentTabContents.map(async (contents) => {
+      const tabMainBlock = await generateTabMainBlock(contents.innerHTML);
+      if (tabMainBlock) {
+        const fragmentSection = tabMainBlock.querySelector(':scope .section');
+        if (fragmentSection) {
+          const section = block.closest('.section');
+          const cssClasses = [...fragmentSection.classList].filter((val) => val !== 'two-columns');
+          section.classList.add(...cssClasses);
+        }
+        if (hashObj && hashObj.tabMatches(contents.dataset.tabTitle, tabSectionIndex)) {
+          return Promise.resolve(true);
+        }
+      }
+      return Promise.resolve(false);
+    });
+
+    const results = await Promise.all(promises);
+    if (results.indexOf(true) > -1) {
+      const section = block.closest('.section');
+
+      const pollInterval = window.setInterval(() => {
+        if (section.style.display !== 'none') {
+          window.clearInterval(pollInterval);
+          block.scrollIntoView();
+        }
+      }, HASH_SCROLL_POLL_INTERVAL_DELAY_IN_MILLI_SECONDS);
+    }
+  }
+}
