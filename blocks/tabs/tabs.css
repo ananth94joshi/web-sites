@@ -1,351 +1,126 @@
-:root {
-    /* Tab Colors */
-    --tabs-active-color: #1473e6;
-    --tabs-border-color: #d8d8d8;
-    --tabs-border-hover-color: #acacac;
-    --tabs-text-color: #7e7e7e;
-    --tabs-active-text-color: #2c2c2c;
-    --tabs-bg-color: rgb(250 250 250);
-    --tabs-active-bg-color: #fff;
-    --tabs-list-bg-gradient: linear-gradient(
-      rgba(255 255 255 0%) 60%,
-      rgba(245 245 245 80%)
-    );
-  
-    /* redesign */
-    --tabs-image-based-border-color: #e8e8e8;
-    --tabs-image-based-active-border-color: #000;
-  }
-  
-  :root .dark {
-    --tabs-border-color: rgb(56 56 56);
-    --tabs-text-color: #cdcdcd;
-    --tabs-active-text-color: #fff;
-    --tabs-bg-color: #1a1a1a;
-    --tabs-active-bg-color: #111;
-    --tabs-list-bg-gradient: linear-gradient(rgba(0 0 0 0%) 60%, rgba(0 0 0 80%));
-  }
-  
-  .tabs[data-block-status="loaded"] {
-    position: relative;
-    margin: 10px 0 0;
-    color: var(--tabs-active-text-color);
-    background-color: var(--tabs-bg-color);
-  }
-  
-  .tabs.xxl-spacing {
-    padding: var(--spacing-xxl) 0;
-  }
-  
-  .tabs.xl-spacing {
-    padding: var(--spacing-xl) 0;
-  }
-  
-  .tabs.l-spacing {
-    padding: var(--spacing-l) 0;
-  }
-  
-  .tabs.s-spacing {
-    padding: var(--spacing-xs) 0;
-  }
-  
-  .tabs.xs-spacing {
-    padding: var(--spacing-xxs) 0;
-  }
-  
-  .tabs [data-block-status="loaded"] div[role="tablist"] {
-    position: relative;
+.tabs {
+    overflow-x: hidden; /* so we could easily hide the radio inputs */
+	margin: 32px 0;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #ccc
+}
+
+.tabs [type="radio"] {
+	/* hiding the inputs */
+	display: none;
+}
+
+.tabs-control {
     display: flex;
-    z-index: 2;
-  
-    /* ScrollProps! */
-  
-    /* If content exceeds height of container, overflow! */
-  
-    overflow: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  
-    /* default bg */
-  
-    background: var(--tabs-list-bg-gradient);
-    box-shadow: 0 -1px 0 inset var(--tabs-border-color);
-  }
-  
-  .tabs div[role="tablist"]::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-  }
-  
-  .tabs .tab-headline {
-    margin-top: var(--spacing-xxl);
-    margin-bottom: var(--spacing-xl);
-  }
-  
-  .tabs.center .tab-headline {
-    text-align: center;
-  }
-  
-  .tablist-container {
+    list-style: none;
+	flex-flow: row wrap;
+    row-gap: 48px;
+	margin: 0 0 24px;
+}
+
+@media (min-width: 1024px){
+	.tabs-control{
+		border-bottom: 1px solid #000;
+	}
+}
+
+
+.tab {
+	margin: 0;
     position: relative;
-  }
-  
-  .tabs div[role="tablist"] button[aria-selected="true"] {
-    background: var(--tabs-active-bg-color);
-    color: var(--tabs-active-text-color);
-    border-color: var(--tabs-border-color) var(--tabs-border-color) transparent;
-  }
-  
-  @media screen and (min-width: 1200px) {
-    .tabs div[role="tablist"] button {
-      padding: 24px 32px 18px;
-      line-height: 18px;
-    }
-  }
-  
-  /* Section Metadata */
-  
-  .tabs-background-transparent .tabs,
-  .tabs-background-transparent .tabs div[role="tablist"],
-  .tabs-background-transparent
-    .tabs
-    div[role="tablist"]
-    button[aria-selected="true"] {
-    background: transparent;
-  }
-  
-  .tabs-background-transparent
-    .tabs
-    div[role="tablist"]
-    button[aria-selected="true"] {
-    border-bottom-color: var(--tabs-active-bg-color);
-  }
-  
-  .tabs div[role="tablist"] .tablist-container {
-    display: flex;
-    justify-content: center;
-    width: var(--grid-container-width);
-    box-sizing: content-box;
-  }
-  
-  /* center tabs */
-  
-  .tabs.center div[role="tablist"]::after,
-  .tabs.center div[role="tablist"]::before {
-    content: "";
-    margin: auto;
-  }
-  
-  .tabs.center div[role="tablist"] .tablist-container {
-    width: auto;
-    margin: 0;
-  }
-  
-  .tabs .tabcontent {
-    padding: 0 10px;
-    border-bottom: 1px solid var(--tabs-border-color);
-    border-right: 1px solid var(--tabs-border-color);
-    border-left: 1px solid var(--tabs-border-color);
-    background-color: var(--tabs-active-bg-color);
-  }
-  
-  .tabcontent-container {
-    position: relative;
-  
-    /* ensure longer content not taking up space */
-    overflow: hidden;
-  }
-  
-  /* contained tabs content */
-  .tabs.contained .tabcontent .tabcontent-container,
-  [role="tabpanel"] > .section > .content {
-    width: var(--grid-container-width);
-    margin: 0 auto;
-  }
-  
-  .tabpanel .section {
-    padding: 0.5rem 0;
-  }
-  
-  /* --- redesign adjustment for animation: STARTS --- */
-  .tabpanel {
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    opacity: 0;
-  }
-  
-  .tabpanel.active {
-    pointer-events: auto;
-    opacity: 1;
-    position: relative;
-  }
-  
-  /* see if need to adjust animation, experimenting only */
-  .tabpanel .image-side {
-    clip-path: var(--circular-1-clip-path-init);
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
-  }
-  
-  .tabpanel.active .image-side {
-    clip-path: var(--circular-1-clip-path-full);
-    opacity: 1;
-  }
-  
-  .tabpanel .testimonial-info {
-    transform: translateX(5%);
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
-  }
-  
-  .tabpanel.active .testimonial-info {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  /* --- redesign adjustment for animation: ENDS --- */
-  
-  .tabs div[role="tablist"] button {
-    background: transparent;
-    border-radius: 4px 4px 0 0;
-    border: 1px solid transparent;
-    color: var(--tabs-text-color);
-    cursor: pointer;
-    float: left;
-    font-family: var(--body-font-family);
-    font-weight: 600;
-    margin-left: -1px;
-    margin-top: 0;
-    padding: 14px 16px 12px;
-    text-decoration: none;
-    transition: color 0.1s ease-in-out;
+    list-style: none;
     white-space: nowrap;
-    width: auto;
-    z-index: 1;
-  }
-  
-  .tabs div[role="tablist"] button:first-of-type {
-    margin-left: 0;
-    margin-top: 0;
-  }
-  
-  .tabs div[role="tablist"] button:hover {
-    color: var(--tabs-active-text-color);
-  }
-  
-  .tabs div[role="tablist"] button:active {
-    color: var(--tabs-active-color);
-  }
-  
-  /* - Tabs: .image-based - */
-  .title-section .tabs-wrapper {
-    margin-top: var(--spacing-s);
-  }
-  
-  .tabs.image-based[data-block-status="loaded"] {
-    background: transparent;
-  }
-  
-  .tabs.image-based div[role="tablist"] button {
-    position: relative;
-    border: none;
-    border-bottom: 2px solid var(--tabs-image-based-border-color);
-    transition: all 0.2s ease-in-out;
-    padding: 16px 0 8px;
+    display: list-item;
+    top: 0;
+    float: none;
+}
+
+
+.tab > label,
+.tab > label > h2,
+.tab > label > h2 > a {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.tab > label > h2 {
+	margin-bottom: 0;
+}
+
+.tab > label > h2 > a {
+	display: block;
     width: 100%;
-  }
-  
-  .tabs.image-based div[role="tablist"] button:hover,
-  .tabs.image-based div[role="tablist"] button[aria-selected="true"] {
-    border-bottom: 2px solid var(--tabs-image-based-active-border-color);
-  }
-  
-  .tabs.image-based div[role="tablist"] button picture {
-    pointer-events: none;
-    opacity: 0.3;
-    transition: opacity 0.2s ease-in-out;
-  }
-  
-  .tabs.image-based div[role="tablist"] button:hover picture,
-  .tabs.image-based div[role="tablist"] button[aria-selected="true"] picture {
-    opacity: 1;
-  }
-  
-  .tabs.image-based div[role="tablist"] img {
-    width: 100%;
-    height: 100%;
-    max-height: 56px;
-    object-fit: contain;
-    pointer-events: none;
-  }
-  
-  .tabs.image-based .tabcontent {
-    border-color: transparent;
-    padding: 0;
-  }
-  
-  .tabs.image-based div[role="tablist"] .tablist-container {
-    width: 175%;
-  }
-  
-  /* tablist overflow on right side */
-  .tabs.image-based div[role="tablist"] {
-    width: calc(100vw - 6vw);
-    overflow: scroll;
-  }
-  
-  .tabs.image-based div[role="tablist"] button:last-of-type {
-    margin-right: 6vw;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .tabs.image-based div[role="tablist"] button {
-      padding: 7px 8px 6px;
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .tabs.image-based div[role="tablist"] {
-      width: 80%;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-  
-    .tabs.image-based div[role="tablist"] button:last-of-type {
-      margin-right: 0;
-    }
-  
-    .tabs.image-based div[role="tablist"] .tablist-container {
-      width: 100%;
-    }
-  }
-  
-  @media screen and (min-width: 900px) {
-    .tabs.image-based div[role="tablist"] {
-      width: 86%;
-      margin: 0 auto;
-    }
-  
-    .tabs div[role="tablist"] button {
-      padding: 24px 16px 18px;
-    }
-  
-    .tabs.image-based div[role="tablist"] img {
-      max-height: 63px;
-    }
-  }
-  
-  /* - Tabs: .contained - */
-  .tabs.contained {
-    max-width: var(--grid-mobile-container-width);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  @media screen and (min-width: 1440px) {
-    .tabs.contained {
-      max-width: var(--grid-desktop-container-width);
-    }
-  }
+    font-weight: 300;
+    line-height: 135%;
+    padding: 16px;
+    border-bottom: 3px solid transparent;
+    box-sizing: border-box;
+    text-shadow: -0.4px -0.4px 0 transparent,0.4px 0.3px transparent;
+	font-size: 24px;
+}
+
+.tab > label > h2 > a:hover{
+	text-decoration: none;
+}
+
+@media (min-width: 1024px){
+	.tab > label > h2 > a {
+		padding: 24px;
+		border-bottom: 3px solid transparent;
+	}
+}
+
+.tab:hover label {
+	color: #333;
+}
+
+.contents-wrapper .contents {
+	display: none;
+	color: #777;
+}
+
+/* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
+.tabs-control .tab:hover > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(1):checked ~ .tabs-control .tab:nth-of-type(1) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(2):checked ~ .tabs-control .tab:nth-of-type(2) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(3):checked ~ .tabs-control .tab:nth-of-type(3) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(4):checked ~ .tabs-control .tab:nth-of-type(4) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(5):checked ~ .tabs-control .tab:nth-of-type(5) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(1):checked ~ .tabs-control .tab:nth-of-type(6) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(2):checked ~ .tabs-control .tab:nth-of-type(7) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(3):checked ~ .tabs-control .tab:nth-of-type(8) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(4):checked ~ .tabs-control .tab:nth-of-type(9) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(5):checked ~ .tabs-control .tab:nth-of-type(10) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(5):checked ~ .tabs-control .tab:nth-of-type(11) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(1):checked ~ .tabs-control .tab:nth-of-type(12) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(2):checked ~ .tabs-control .tab:nth-of-type(13) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(3):checked ~ .tabs-control .tab:nth-of-type(14) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(4):checked ~ .tabs-control .tab:nth-of-type(15) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(2):checked ~ .tabs-control .tab:nth-of-type(16) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(3):checked ~ .tabs-control .tab:nth-of-type(17) > label > h2 > a,
+.tabs [type="radio"]:nth-of-type(4):checked ~ .tabs-control .tab:nth-of-type(18) > label > h2 > a {
+	color: #005AFF;
+    border-color: #005AFF;
+    text-shadow: -0.4px -0.4px 0 #005AFF, 0.4px 0.3px #005AFF;
+}
+
+.tabs [type="radio"]:nth-of-type(1):checked ~ .contents-wrapper .contents:nth-of-type(1),
+.tabs [type="radio"]:nth-of-type(2):checked ~ .contents-wrapper .contents:nth-of-type(2),
+.tabs [type="radio"]:nth-of-type(3):checked ~ .contents-wrapper .contents:nth-of-type(3),
+.tabs [type="radio"]:nth-of-type(4):checked ~ .contents-wrapper .contents:nth-of-type(4),
+.tabs [type="radio"]:nth-of-type(5):checked ~ .contents-wrapper .contents:nth-of-type(5),
+.tabs [type="radio"]:nth-of-type(6):checked ~ .contents-wrapper .contents:nth-of-type(6),
+.tabs [type="radio"]:nth-of-type(7):checked ~ .contents-wrapper .contents:nth-of-type(7),
+.tabs [type="radio"]:nth-of-type(8):checked ~ .contents-wrapper .contents:nth-of-type(8),
+.tabs [type="radio"]:nth-of-type(9):checked ~ .contents-wrapper .contents:nth-of-type(9),
+.tabs [type="radio"]:nth-of-type(10):checked ~ .contents-wrapper .contents:nth-of-type(10),
+.tabs [type="radio"]:nth-of-type(11):checked ~ .contents-wrapper .contents:nth-of-type(11),
+.tabs [type="radio"]:nth-of-type(12):checked ~ .contents-wrapper .contents:nth-of-type(12),
+.tabs [type="radio"]:nth-of-type(13):checked ~ .contents-wrapper .contents:nth-of-type(13),
+.tabs [type="radio"]:nth-of-type(14):checked ~ .contents-wrapper .contents:nth-of-type(14),
+.tabs [type="radio"]:nth-of-type(15):checked ~ .contents-wrapper .contents:nth-of-type(15),
+.tabs [type="radio"]:nth-of-type(16):checked ~ .contents-wrapper .contents:nth-of-type(16),
+.tabs [type="radio"]:nth-of-type(17):checked ~ .contents-wrapper .contents:nth-of-type(17),
+.tabs [type="radio"]:nth-of-type(18):checked ~ .contents-wrapper .contents:nth-of-type(18){
+	display: block;
+}
