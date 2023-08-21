@@ -332,8 +332,7 @@ body > main > div.section.columns-container.counter-container > div> div > div> 
 }
 
 body > main > div.section.columns-container.counter-container > div.counter-wrapper > div{
-   position:absolute;
-    top: 320%;
+
     left : 20%;
     font-size: 24px;
     font-weight: bold;
