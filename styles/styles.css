@@ -307,3 +307,60 @@ main .section.highlight {
   padding: 50px;
   color: #fff;
 }
+
+
+
+//Global level css change
+
+body > main > div.section.columns-container.counter-container > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(1){
+    margin-top:20%;
+}
+body > main > div.section.columns-container.counter-container > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(2){
+  
+border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+	margin-bottom:20px;
+	
+}
+body > main > div.section.columns-container.counter-container > div> div > div> div{
+  padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+	margin-bottom:20px;
+}
+
+body > main > div.section.columns-container.counter-container > div.counter-wrapper > div{
+    position:absolute;
+    top:350%;
+    left : 20%;
+}
+
+	body > main > div.section.columns-container.counter-container > div:nth-child(1) > p:nth-child(2){
+		position:absolute;
+		top:25%;
+		left:3%;
+		color:#fff;
+		font-size:16px;
+	}
+
+h2#services {
+    text-align: center;
+}
+
+body > main > div.section.columns-container.counter-container > div:nth-child(1) > p:nth-child(3){
+    position:absolute;
+    top:33%;
+    left:3%;
+    background-color: #fff;
+        padding: 10px;
+        border-radius:5px;
+}
+   body > main > div.section.columns-container.counter-container > div:nth-child(1) > p:nth-child(3) > strong > a{
+       background-color:green;
+    height:40px;
+       padding:7px;
+       border-radius:5px;
+       color:white;
+   }
