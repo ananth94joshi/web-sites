@@ -133,3 +133,19 @@ async function loadPage() {
 }
 
 loadPage();
+
+
+// Step 1: Get the parent element
+const parentElement = document.querySelector("body > main > div.section.columns-container.counter-container > div:nth-child(1) > p:nth-child(3)");
+
+if (parentElement) {
+    // Step 2: Create the input element
+    const inputElement = document.createElement('input');
+    
+    // Step 3: Set placeholder attribute
+    inputElement.placeholder = "Enter your text here";
+    
+    // Step 4: Append the input element to the parent element
+    parentElement.appendChild(inputElement);
+}
+
