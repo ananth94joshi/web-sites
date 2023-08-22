@@ -683,3 +683,38 @@ body > main > div.section.columns-container.counter-container.buttons-container.
     top: 4%;
     background-color: #e84545;
 }
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > p:nth-child(1) > picture > img{
+    max-width: 30%;
+    margin-left:20%;
+}
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) > picture > img{
+    max-width: 30%;
+    margin-left:20%;
+}
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) > picture > img{
+    max-width: 30%;
+    margin-left:20%;
+}
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(3) > p:nth-child(1) > picture > img{
+    max-width: 30%;
+    margin-left:20%;
+}
+
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(1) {
+position: relative;
+top : 250px;
+}
+
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(1) > p.button-container > em > a{
+    background-color:red;
+    border:none;
+    border-radius:5px;
+    color:white;
+}
+
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(1) > p.button-container > em > a:hover{
+    background-color:white;
+    border: 1px solid;
+    border-radius:5px;
+    color:black;
+}
