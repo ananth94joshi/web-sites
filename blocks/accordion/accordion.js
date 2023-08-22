@@ -13,7 +13,6 @@
 //       });
 //     });
 //   }
-
 export default function init(el) {
   const titles = el.querySelectorAll(':scope > div:nth-child(odd)');
   titles.forEach((title) => {
@@ -24,14 +23,22 @@ export default function init(el) {
     title.insertBefore(titleElement, title.firstChild); // Insert the title element at the beginning
 
     // Remove the empty div
-    title.querySelector(':scope > div:last-of-type').remove();
+    const emptyDiv = title.querySelector(':scope > div:last-of-type');
+    if (emptyDiv) {
+      emptyDiv.remove();
+    }
 
     // Add a class to the content
-    title.nextElementSibling.classList.add('item-content');
+    const content = title.nextElementSibling;
+    content.classList.add('item-content');
 
-    // Add a click handler to open the content
+    // Hide the content by default
+    content.style.display = 'none';
+
+    // Add a click handler to open or close the content
     title.addEventListener('click', () => {
-      title.classList.toggle('open');
+      content.style.display = content.style.display === 'none' ? 'block' : 'none';
+      title.classList.toggle('open', content.style.display === 'block');
     });
   });
 }
