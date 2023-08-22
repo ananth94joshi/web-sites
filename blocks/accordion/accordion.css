@@ -1,45 +1,36 @@
 .accordion {
-    background: #EFEFEF;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
 }
 
-.item-title {
-    cursor: pointer;
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.active, .accordion:hover {
+  background-color: #ccc;
 }
 
-.item-title::after {
-    width: 10px;
-    height: 10px;
-    border-bottom: 2px solid #a7a7a7;
-    border-right: 2px solid #a7a7a7;
-    transform-origin: 75% 75%;
-    transform: rotate(-45deg) translateY(-50%);
-    transition: transform .1s ease;
-    content: '';
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
 }
 
-.item-title.open {
-    background: #ddd;
+.active:after {
+  content: "\2212";
 }
 
-.item-title.open::after {
-    transform: rotate(-135deg) translateX(50%);
-}
-
-.item-content {
-    display: none;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-}
-
-.item-title.open + .item-content {
-    display: grid;
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
