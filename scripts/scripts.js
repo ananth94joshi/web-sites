@@ -149,3 +149,16 @@ if (parentElement) {
     parentElement.appendChild(inputElement);
 }
 
+// Step 1: Get the input element and target element
+const inputElement = document.querySelector("body > main > div.section.columns-container.counter-container > div:nth-child(1) > p:nth-child(3) input");
+const targetElement = document.querySelector("body > main > div.section.columns-container.counter-container > div:nth-child(1) > p:nth-child(3) strong > a");
+
+if (inputElement && targetElement) {
+    // Step 2: Insert the target element after the input element
+    insertAfter(targetElement, inputElement);
+}
+
+// Function to insert an element after another element
+function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
