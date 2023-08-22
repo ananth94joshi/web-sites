@@ -461,3 +461,69 @@ body > main > div.section.columns-container.counter-container.buttons-container 
 body > main > div.section.columns-container.counter-container.buttons-container > div.buttons-wrapper > div > div > div:nth-child(4){
     display:inline;
 }
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(1) > picture{
+    filter : grayscale(100);
+opacity : 0.5;
+
+}
+ body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(1) > picture:hover {
+filter : none;
+opacity : 1;
+
+}
+
+
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(2) > picture{
+    filter : grayscale(100);
+opacity : 0.5;
+
+}
+ body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(2) > picture:hover {
+filter : none;
+opacity : 1;
+
+}
+
+
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(3) > picture{
+    filter : grayscale(100);
+opacity : 0.5;
+
+}
+ body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(3) > picture:hover {
+filter : none;
+opacity : 1;
+
+}
+
+
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(4) > picture{
+    filter : grayscale(100);
+opacity : 0.5;
+
+}
+ body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(4) > picture:hover {
+filter : none;
+opacity : 1;
+
+}
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(5) > picture{
+    filter : grayscale(100);
+opacity : 0.5;
+
+}
+ body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(5) > picture:hover {
+filter : none;
+opacity : 1;
+
+}
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(6) > picture{
+    filter : grayscale(100);
+opacity : 0.5;
+
+}
+ body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(6) > picture:hover {
+filter : none;
+opacity : 1;
+
+}
