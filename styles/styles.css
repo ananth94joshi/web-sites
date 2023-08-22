@@ -662,3 +662,24 @@ body > main > div.section.columns-container.counter-container.buttons-container.
 body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div.cards-wrapper > div > ul > li:nth-child(3) > div:nth-child(2) > p{
   text-align:center;
 }
+body > main > div.section.columns-container.counter-container > div:nth-child(1) > p:nth-child(3) {
+    position: absolute;
+    top: 33%;
+    left: 3%;
+    padding: 10px;
+    width: 45%;
+    border-radius: 5px;
+    display: inline;
+}
+main input{
+    width:70%;
+}
+
+body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(1) > p.button-container > a {
+    position: absolute;
+    display: inline;
+    margin-left: 45%;
+    border-radius: 5px;
+    top: 4%;
+    background-color: #e84545;
+}
