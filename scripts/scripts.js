@@ -143,7 +143,7 @@ if (parentElement) {
     const inputElement = document.createElement('input');
     
     // Step 3: Set placeholder attribute
-    inputElement.placeholder = "Enter your text here";
+    inputElement.placeholder = "Enter your Email Address";
     
     // Step 4: Append the input element to the parent element
     parentElement.appendChild(inputElement);
