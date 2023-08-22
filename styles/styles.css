@@ -354,7 +354,7 @@ body > main > div.section.columns-container.counter-container > div:nth-child(1)
     position:absolute;
     top:33%;
     left:3%;
-    background-color: #fff;
+ 
         padding: 10px;
         border-radius:5px;
 }
