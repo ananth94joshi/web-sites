@@ -340,7 +340,7 @@ body > main > div.section.columns-container.counter-container > div.counter-wrap
 
 	body > main > div.section.columns-container.counter-container > div:nth-child(1) > p:nth-child(2){
 		position:absolute;
-		top:25%;
+		top:28%;
 		left:3%;
 		color:#fff;
 		font-size:16px;
@@ -525,5 +525,8 @@ opacity : 0.5;
  body > main > div.section.columns-container.counter-container.buttons-container.cards-container.accordion-container > div:nth-child(2) > div > div > div:nth-child(6) > picture:hover {
 filter : none;
 opacity : 1;
-
+}
+.section.columns-container.counter-container.buttons-container.cards-container.accordion-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
