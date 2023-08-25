@@ -211,7 +211,7 @@ const counterElements = document.querySelectorAll(".counter");
 
 const targetDivProject = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)");
 targetDivProject.classList.add("project");
-const counterElements = document.querySelectorAll(".counter");
+const projectcounterElements = document.querySelectorAll(".project");
         let count = 0;
 
         const targetCount = 521;
@@ -222,7 +222,7 @@ const counterElements = document.querySelectorAll(".counter");
 
             if (count <= targetCount) {
 
-                counterElements.forEach(element => {
+                projectcounterElements.forEach(element => {
 
                     element.textContent = count;
 
