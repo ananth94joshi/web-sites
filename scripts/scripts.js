@@ -150,6 +150,26 @@ appendFormContainerForm.classList.add('col-lg-6');
 newRow.appendChild(appendFormContainer);
 newRow.appendChild(appendFormContainerForm);
 appendParentFormContainer.appendChild(newRow);
+
+// Find the existing strong tag in hero for updating input
+var strongTag = document.querySelector(".button-container strong");
+
+if (strongTag) {
+    // Check if the input element already exists within the strong tag
+    var inputElement = strongTag.querySelector("input.enteryouremail");
+
+    if (!inputElement) {
+        // Create a new input element
+        inputElement = document.createElement("input");
+        inputElement.type = "email"; // Set input type to 'email'
+        inputElement.placeholder = "Enter your email address"; // Set the placeholder text
+        inputElement.className = "enteryouremail"; // Add a class to the input element
+
+        // Add the input element to the existing strong tag
+        strongTag.appendChild(inputElement);
+    }
+}
+
 //counter logic
 
 // Function to create a counter animation for a given target div and count
@@ -202,21 +222,3 @@ animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div
 // Create counter animation for worker
 animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 32); // Updated worker count
 
-// Find the existing strong tag in hero for updating input
-var strongTag = document.querySelector(".button-container strong");
-
-if (strongTag) {
-    // Check if the input element already exists within the strong tag
-    var inputElement = strongTag.querySelector("input.enteryouremail");
-
-    if (!inputElement) {
-        // Create a new input element
-        inputElement = document.createElement("input");
-        inputElement.type = "email"; // Set input type to 'email'
-        inputElement.placeholder = "Enter your email address"; // Set the placeholder text
-        inputElement.className = "enteryouremail"; // Add a class to the input element
-
-        // Add the input element to the existing strong tag
-        strongTag.appendChild(inputElement);
-    }
-}
