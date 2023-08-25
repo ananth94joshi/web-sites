@@ -1221,3 +1221,165 @@ body > main > div.section.cards-container.forms-container > div.row > div.forms-
     padding: 10px 30px;
     height: 100%;
 }
+//Gopi css changes
+body > main > div:nth-child(3) > div > div > div {
+    padding-left: 54px;
+    padding-right: 0px;
+    margin-left: -51px;
+    margin-right: -316px;
+}
+
+body > main > div:nth-child(3){
+  background-color: #f8f9fa;
+}
+
+body > main > div:nth-child(3) > div > div > div > div:nth-child(1) > picture,
+body > main > div:nth-child(3) > div > div > div > div:nth-child(2) > picture,
+body > main > div:nth-child(3) > div > div > div > div:nth-child(3) > picture,
+body > main > div:nth-child(3) > div > div > div > div:nth-child(4) > picture,
+body > main > div:nth-child(3) > div > div > div > div:nth-child(5) > picture,
+body > main > div:nth-child(3) > div > div > div > div:nth-child(6) > picture{
+    filter : grayscale(100);
+    opacity : 0.5;
+    padding: 57px;
+}
+
+body > main > div:nth-child(3) > div > div > div > div:nth-child(1) > picture:hover,
+body > main > div:nth-child(3) > div > div > div > div:nth-child(2) > picture:hover,
+body > main > div:nth-child(3) > div > div > div > div:nth-child(3) > picture:hover,
+body > main > div:nth-child(3) > div > div > div > div:nth-child(4) > picture:hover,
+body > main > div:nth-child(3) > div > div > div > div:nth-child(5) > picture:hover,
+body > main > div:nth-child(3) > div > div > div > div:nth-child(6) > picture:hover{
+filter : none;
+opacity : 1;
+}
+
+body > main > div:nth-child(3) > div {
+    max-width: 100%;
+}
+
+body > main > div:nth-child(3) {
+    padding: 0px 0px;
+}
+
+body > main > div:nth-child(3) > div > div > div > div:nth-child(1),
+body > main > div:nth-child(3) > div > div > div > div:nth-child(2),
+body > main > div:nth-child(3) > div > div > div > div:nth-child(3),
+body > main > div:nth-child(3) > div > div > div > div:nth-child(4),
+body > main > div:nth-child(3) > div > div > div > div:nth-child(5),
+body > main > div:nth-child(3) > div > div > div > div:nth-child(6){
+justify-content : center;
+display : flex;
+align-items: center;
+overflow: hidden;
+flex: 0 0 auto;
+width: 12%;
+}
+
+body > main > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(1) {
+    position:relative;
+    top: 180px;
+}
+
+#about-us {
+      --color-primary-rgb: 232, 69, 69;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19px;
+      padding: 10px 20px;
+      background: rgba(var(--color-primary-rgb), 0.05);
+      color: #e84545;
+      border-radius: 7px;
+      display: inline-block;
+}
+
+body > main > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(1) > p.button-container > em > a {
+ --color-primary: #e84545;
+  --color-inverse: #ffffff;
+  --font-primary: "Montserrat", sans-serif;
+  background: var(--color-primary);
+  color: var(--color-inverse);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(1) > p.button-container > em > a:hover {
+      --color-primary-rgb: 232, 69, 69;
+    background: rgba(var(--color-primary-rgb), 0.8);
+  padding-right: 19px;
+}
+
+body > main > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(2),
+body > main > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(3),
+body > main > div:nth-child(4) > div > div > div:nth-child(2) > div:nth-child(2),
+body > main > div:nth-child(4) > div > div > div:nth-child(2) > div:nth-child(3){
+  --color-box-background: #ffffff;
+    border: 1px solid;
+    padding: 22px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    transition: all 0.3s ease-out 0s;
+   background-color: var(--color-box-background);
+}
+
+body > main > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) > picture > img,
+body > main > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(3) > p:nth-child(1) > picture > img,
+body > main > div:nth-child(4) > div > div > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) > picture > img,
+body > main > div:nth-child(4) > div > div > div:nth-child(2) > div:nth-child(3) > p:nth-child(1) > picture > img{
+    max-width: 30%;
+    margin-left: 2%;
+}
+
+body > main > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(2) {
+       box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+body > main > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(3) {
+    position:relative;
+    bottom: 40px;
+     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+body > main > div:nth-child(4) > div > div > div:nth-child(2) > div:nth-child(2) {
+      position: relative;
+    bottom: 70px;
+      box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+body > main > div:nth-child(4) > div > div > div:nth-child(2) > div:nth-child(3) {
+  position: relative;
+  bottom: 100px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+body > main > div:nth-child(2) > div > p:nth-child(2) {
+position: relative;
+bottom: 251px;
+color: white;
+    margin: 5px 0 0 0;
+  font-size: 20px;
+}
+
+body > main > div:nth-child(2) > div > p.button-container > strong > a {
+  position: relative;
+  bottom: 261px;
+  left: 301px;
+  background-color: red;
+}
+body > main > div:nth-child(2) > div > p.button-container > strong > a:hover {
+  background-color: red;
+}
+
+#welcome-to-our-website {
+  font-size: 44px;
+  font-weight: 700;
+}
