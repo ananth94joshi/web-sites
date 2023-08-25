@@ -1,4 +1,4 @@
-const counterElements = document.querySelectorAll(".counter");
+const counterElements = document.querySelectorAll(".projects");
 
        
 
