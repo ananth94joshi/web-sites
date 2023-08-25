@@ -225,14 +225,12 @@ animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div
 // Create counter animation for worker
 animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 32); // Updated worker count
 
-
-//for input on hero banner
-// Find the existing strong tag
+// Find the existing strong tag in hero for updating input
 var strongTag = document.querySelector(".button-container strong");
 
 if (strongTag) {
-    // Get the existing input element (if it exists)
-    var inputElement = strongTag.querySelector("input");
+    // Check if the input element already exists within the strong tag
+    var inputElement = strongTag.querySelector("input.enteryouremail");
 
     if (!inputElement) {
         // Create a new input element
