@@ -150,17 +150,13 @@ appendFormContainerForm.classList.add('col-lg-6');
 newRow.appendChild(appendFormContainer);
 newRow.appendChild(appendFormContainerForm);
 appendParentFormContainer.appendChild(newRow);
+//counter logic
 
+// Function to create a counter animation for a given target div and count
 function animateCounter(targetSelector, targetCount) {
     const targetDiv = document.querySelector(targetSelector);
-    if (!targetDiv) {
-        console.error("Target element not found:", targetSelector);
-        return;
-    }
-    
     targetDiv.classList.add("counter");
-    const counterElements = targetDiv.querySelectorAll(".counter"); // Update this selector
-    
+    const counterElements = document.querySelectorAll(targetSelector);
     let count = 0;
 
     const counterInterval = setInterval(() => {
@@ -173,6 +169,25 @@ function animateCounter(targetSelector, targetCount) {
             clearInterval(counterInterval);
         }
     }, 50); // Adjust the interval as needed
+
+    // Worker counter animation
+    const workerTargetSelector = targetSelector.replace("div:nth-child(4)", "div:nth-child(5)");
+    const workerTargetDiv = document.querySelector(workerTargetSelector);
+    workerTargetDiv.classList.add("worker");
+    const workerCounterElements = document.querySelectorAll(workerTargetSelector);
+    let workerCount = 0;
+    const workerTargetCount = 32; // Updated worker count
+
+    const workerInterval = setInterval(() => {
+        if (workerCount <= workerTargetCount) {
+            workerCounterElements.forEach(element => {
+                element.textContent = workerCount;
+            });
+            workerCount++;
+        } else {
+            clearInterval(workerInterval);
+        }
+    }, 50); // Adjust the interval as needed
 }
 
 // Create counter animation for counters
@@ -182,12 +197,10 @@ animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div
 animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)", 521);
 
 // Create counter animation for support
-animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(3)", 1453);
+animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(3)", 1453); // Updated support count
 
 // Create counter animation for worker
-animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 32); // Update selector
-
-
+animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 32); // Updated worker count
 
 // Find the existing strong tag in hero for updating input
 var strongTag = document.querySelector(".button-container strong");
