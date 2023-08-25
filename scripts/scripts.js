@@ -176,10 +176,10 @@ newRow.appendChild(appendFormContainerForm);
 appendParentFormContainer.appendChild(newRow);
 //scripts for adding class
 // Select the element using querySelector
-const targetDiv = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(1)");
+const targetDivCounter = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(1)");
 
 // Add a class to the selected div
-targetDiv.classList.add("counter");
+targetDivCounter.classList.add("counter");
 
 const counterElements = document.querySelectorAll(".counter");
         let count = 0;
@@ -209,8 +209,8 @@ const counterElements = document.querySelectorAll(".counter");
         }, 50); // Adjust the interval as needed
 
 
-const targetDiv = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)");
-targetDiv.classList.add("project");
+const targetDivProject = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)");
+targetDivProject.classList.add("project");
 const counterElements = document.querySelectorAll(".counter");
         let count = 0;
 
