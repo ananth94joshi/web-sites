@@ -175,71 +175,31 @@ newRow.appendChild(appendFormContainer);
 newRow.appendChild(appendFormContainerForm);
 appendParentFormContainer.appendChild(newRow);
 
-// Add a class to the selected div for counters
-const targetDivCounter = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(1)");
-targetDivCounter.classList.add("counter");
+// Function to create a counter animation for a given target div and count
+function animateCounter(targetSelector, targetCount) {
+    const targetDiv = document.querySelector(targetSelector);
+    targetDiv.classList.add("counter");
+    const counterElements = document.querySelectorAll(targetSelector);
+    let count = 0;
 
-const counterElements = document.querySelectorAll(".counter");
-let count = 0;
-const targetCount = 232;
+    const counterInterval = setInterval(() => {
+        if (count <= targetCount) {
+            counterElements.forEach(element => {
+                element.textContent = count;
+            });
+            count++;
+        } else {
+            clearInterval(counterInterval);
+        }
+    }, 50); // Adjust the interval as needed
+}
 
-const counterInterval = setInterval(() => {
-    if (count <= targetCount) {
-        counterElements.forEach(element => {
-            element.textContent = count;
-        });
-        count++;
-    } else {
-        clearInterval(counterInterval);
-    }
-}, 50); // Adjust the interval as needed
+// Create counter animation for counters
+animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(1)", 232);
 
-// Add a class to the selected div for projects
-const targetDivProject = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)");
-targetDivProject.classList.add("project");
+// Create counter animation for projects
+animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)", 521);
 
-const projectCounterElements = document.querySelectorAll(".project");
-let projectCount = 0;
-const projectTargetCount = 521;
+// Create counter animation for support
+animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(3)", 521);
 
-const projectInterval = setInterval(() => {
-    if (projectCount <= projectTargetCount) {
-        projectCounterElements.forEach(element => {
-            element.textContent = projectCount;
-        });
-        projectCount++;
-    } else {
-        clearInterval(projectInterval);
-    }
-}, 50); // Adjust the interval as needed
-
-
-//support code 
-const targetDivProject = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(3)");
-targetDivProject.classList.add("support");
-const projectcounterElements = document.querySelectorAll(".support");
-       
-
-        const supporttargetCount = 521;
-
-       
-
-        const interval = setInterval(() => {
-
-            if (count <= supporttargetCount) {
-
-                projectcounterElements.forEach(element => {
-
-                    element.textContent = count;
-
-                });
-
-                count++;
-
-            } else {
-
-                clearInterval(interval);
-
-            }
-
-        }, 50); // Adjust the interval as needed
