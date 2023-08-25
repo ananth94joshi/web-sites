@@ -174,66 +174,41 @@ appendFormContainerForm.classList.add('col-lg-6');
 newRow.appendChild(appendFormContainer);
 newRow.appendChild(appendFormContainerForm);
 appendParentFormContainer.appendChild(newRow);
-//scripts for adding class
-// Select the element using querySelector
-const targetDivCounter = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(1)");
 
-// Add a class to the selected div
+// Add a class to the selected div for counters
+const targetDivCounter = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(1)");
 targetDivCounter.classList.add("counter");
 
 const counterElements = document.querySelectorAll(".counter");
-        let count = 0;
+let count = 0;
+const targetCount = 232;
 
-        const targetCount = 232;
+const counterInterval = setInterval(() => {
+    if (count <= targetCount) {
+        counterElements.forEach(element => {
+            element.textContent = count;
+        });
+        count++;
+    } else {
+        clearInterval(counterInterval);
+    }
+}, 50); // Adjust the interval as needed
 
-       
-
-        const interval = setInterval(() => {
-
-            if (count <= targetCount) {
-
-                counterElements.forEach(element => {
-
-                    element.textContent = count;
-
-                });
-
-                count++;
-
-            } else {
-
-                clearInterval(interval);
-
-            }
-
-        }, 50); // Adjust the interval as needed
-
-
+// Add a class to the selected div for projects
 const targetDivProject = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)");
 targetDivProject.classList.add("project");
-const projectcounterElements = document.querySelectorAll(".project");
-       
 
-        const projecttargetCount = 521;
+const projectCounterElements = document.querySelectorAll(".project");
+let projectCount = 0;
+const projectTargetCount = 521;
 
-       
-
-        const interval = setInterval(() => {
-
-            if (count <= projecttargetCount) {
-
-                projectcounterElements.forEach(element => {
-
-                    element.textContent = count;
-
-                });
-
-                count++;
-
-            } else {
-
-                clearInterval(interval);
-
-            }
-
-        }, 50); // Adjust the interval as needed
+const projectInterval = setInterval(() => {
+    if (projectCount <= projectTargetCount) {
+        projectCounterElements.forEach(element => {
+            element.textContent = projectCount;
+        });
+        projectCount++;
+    } else {
+        clearInterval(projectInterval);
+    }
+}, 50); // Adjust the interval as needed
