@@ -214,13 +214,13 @@ targetDivProject.classList.add("project");
 const projectcounterElements = document.querySelectorAll(".project");
        
 
-        const targetCount = 521;
+        const projecttargetCount = 521;
 
        
 
         const interval = setInterval(() => {
 
-            if (count <= targetCount) {
+            if (count <= projecttargetCount) {
 
                 projectcounterElements.forEach(element => {
 
