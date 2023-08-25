@@ -162,3 +162,15 @@ if (inputElement && targetElement) {
 function insertAfter(newNode, referenceNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
+//scripts for contact form
+var appendParentFormContainer = document.querySelector("body > main > div.section.cards-container.forms-container");
+var appendFormContainer = document.querySelector("body > main > div.section.cards-container.forms-container > div.cards-wrapper");
+var appendFormContainerForm = document.querySelector("body > main > div.section.cards-container.forms-container > div.forms-wrapper");
+var newRow = document.createElement('div');
+newRow.classList.add('row');
+appendFormContainer.classList.add('col-lg-6');
+appendFormContainerForm.classList.add('col-lg-6');
+
+newRow.appendChild(appendFormContainer);
+newRow.appendChild(appendFormContainerForm);
+appendParentFormContainer.appendChild(newRow);
