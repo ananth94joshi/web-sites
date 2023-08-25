@@ -212,3 +212,34 @@ const projectInterval = setInterval(() => {
         clearInterval(projectInterval);
     }
 }, 50); // Adjust the interval as needed
+
+
+//support code 
+const targetDivProject = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(3)");
+targetDivProject.classList.add("support");
+const projectcounterElements = document.querySelectorAll(".support");
+       
+
+        const supporttargetCount = 521;
+
+       
+
+        const interval = setInterval(() => {
+
+            if (count <= supporttargetCount) {
+
+                projectcounterElements.forEach(element => {
+
+                    element.textContent = count;
+
+                });
+
+                count++;
+
+            } else {
+
+                clearInterval(interval);
+
+            }
+
+        }, 50); // Adjust the interval as needed
