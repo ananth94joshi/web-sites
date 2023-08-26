@@ -221,19 +221,3 @@ animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div
 
 // Create counter animation for worker
 animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 32); // Updated worker count
-
-//accordion title change
-document.addEventListener("DOMContentLoaded", function() {
-    // Select the source h1 element
-    const sourceH1 = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
-
-    // Select the target element
-    const targetElement = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title.open");
-
-    if (sourceH1 && targetElement) {
-        // Append the source h1 to the target element
-        targetElement.appendChild(sourceH1);
-    } else {
-        console.log("Source h1 or target element not found.");
-    }
-});
