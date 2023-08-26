@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const sourceH1 = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
 
     // Step 3: Select the target element
-    const targetElement = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title.open");
+    const targetElement = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title");
 
     if (sourceH1 && targetElement) {
         // Step 4: Append the source h1 to the target element
