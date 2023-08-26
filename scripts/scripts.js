@@ -171,18 +171,7 @@ if (strongTag) {
 }
 
 //accordion title
-document.addEventListener("DOMContentLoaded", function() {
-    // Step 2: Select the source h1 element
-    const sourceH1 = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
 
-    // Step 3: Select the target element
-    const targetElement = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title");
-
-    if (sourceH1 && targetElement) {
-        // Step 4: Append the source h1 to the target element
-        targetElement.appendChild(sourceH1);
-    }
-});
 
 
 
