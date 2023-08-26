@@ -171,20 +171,7 @@ if (strongTag) {
 }
 
 //accordion title
-// Wait for the page to load
-window.addEventListener('load', function() {
-  // Get the target element to which you want to append the ID value
-  var targetElement = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title");
 
-  // ID value to append
-  var idValue = "non-consectetur-a-erat-nam-at-lectus-urna-duis";
-
-  // Use setTimeout to delay the appending action
-  setTimeout(function() {
-    // Append the ID value to the target element's text content
-    targetElement.textContent += ' ' + idValue;
-  }, 1000); // Delay in milliseconds, adjust as needed
-});
 
 //counter logic
 
