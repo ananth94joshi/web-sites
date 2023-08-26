@@ -170,6 +170,16 @@ if (strongTag) {
     }
 }
 
+//accordion title
+window.onload = function() {
+  var sourceH1 = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
+  var targetDiv = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title");
+
+  if (sourceH1 && targetDiv) {
+    targetDiv.textContent = sourceH1.textContent;
+  }
+};
+
 //counter logic
 
 // Function to create a counter animation for a given target div and count
@@ -222,12 +232,3 @@ animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div
 // Create counter animation for worker
 animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 32); // Updated worker count
 
-//accordion title
-window.onload = function() {
-  var sourceH1 = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
-  var targetDiv = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title");
-
-  if (sourceH1 && targetDiv) {
-    targetDiv.textContent = sourceH1.textContent;
-  }
-};
