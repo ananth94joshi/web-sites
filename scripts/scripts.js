@@ -131,47 +131,6 @@ async function loadPage() {
   await loadLazy(document);
   loadDelayed();
 }
-//script for adding bootstrap classes
-
-
-const selectBody = document.querySelector('body');
-
-  function toggleScrolled() {
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-  }
-
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
-  
-  var footerContainer = document.querySelector("body > footer > div > div > div > div");
-  footerContainer.classList.add('container');
-  var footerRow = document.querySelector("body > footer > div > div > div > div > div");
-  footerRow.classList.add('row', 'gy-4');
-  var footerAbout = document.querySelector("body > footer > div > div > div > div > div > div:nth-child(1)");
-  footerAbout.classList.add('col-lg-5', 'col-md-12');
-  var footerUsefulLinks = document.querySelector("body > footer > div > div > div > div > div > div:nth-child(2)");
-  footerUsefulLinks.classList.add('col-lg-2', 'col-6');
-  var footerServices = document.querySelector("body > footer > div > div > div > div > div > div:nth-child(3)");
-  footerServices.classList.add('col-lg-2', 'col-6');
-  var footerContactUs = document.querySelector("body > footer > div > div > div > div > div > div:nth-child(4)");
-  footerContactUs.classList.add('col-lg-3', 'col-md-12');
-  
-  var testimonialContainer = document.querySelector("body > main > div:nth-child(13) > div");
-  var testimonialsTitle = document.querySelector("body > main > div:nth-child(13) > div.default-content-wrapper > h2#testimonials");
-  var testimonialDesc = document.querySelector("body > main > div:nth-child(13) > div.default-content-wrapper > p:nth-child(2)");
-  var testimonialCaro = document.querySelector("body > main > div:nth-child(13) > div > p:nth-child(3)");
-  var testimonialNewRow = document.createElement('div');
-  testimonialNewRow.classList.add('col-lg-5');
-  testimonialNewRow.appendChild(testimonialsTitle);
-  testimonialNewRow.appendChild(testimonialDesc);
-  testimonialContainer.appendChild(testimonialNewRow);
-  var testimonialNewCarousal = document.createElement('div');
-  testimonialNewCarousal.classList.add('col-lg-7');
-  testimonialNewCarousal.appendChild(testimonialCaro);
-  testimonialContainer.appendChild(testimonialNewCarousal);
-  testimonialContainer.classList.add('row');
-  
-
 loadPage();
 
 // Function to insert an element after another element
@@ -210,4 +169,57 @@ if (strongTag) {
     }
 }
 
+
+
+//counter logic
+
+// Function to create a counter animation for a given target div and count
+function animateCounter(targetSelector, targetCount) {
+    const targetDiv = document.querySelector(targetSelector);
+    targetDiv.classList.add("counter");
+    const counterElements = document.querySelectorAll(targetSelector);
+    let count = 0;
+
+    const counterInterval = setInterval(() => {
+        if (count <= targetCount) {
+            counterElements.forEach(element => {
+                element.textContent = count;
+            });
+            count++;
+        } else {
+            clearInterval(counterInterval);
+        }
+    }, 50); // Adjust the interval as needed
+
+    // Worker counter animation
+    const workerTargetSelector = targetSelector.replace("div:nth-child(4)", "div:nth-child(5)");
+    const workerTargetDiv = document.querySelector(workerTargetSelector);
+    workerTargetDiv.classList.add("worker");
+    const workerCounterElements = document.querySelectorAll(workerTargetSelector);
+    let workerCount = 0;
+    const workerTargetCount = 32; // Updated worker count
+
+    const workerInterval = setInterval(() => {
+        if (workerCount <= workerTargetCount) {
+            workerCounterElements.forEach(element => {
+                element.textContent = workerCount;
+            });
+            workerCount++;
+        } else {
+            clearInterval(workerInterval);
+        }
+    }, 50); // Adjust the interval as needed
+}
+
+// Create counter animation for counters
+animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(1)", 232);
+
+// Create counter animation for projects
+animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)", 521);
+
+// Create counter animation for support
+animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(3)", 1453); // Updated support count
+
+// Create counter animation for worker
+animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 32); // Updated worker count
 
