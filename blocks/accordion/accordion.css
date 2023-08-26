@@ -41,5 +41,5 @@
 }
 
 .item-title.open + .item-content {
-    display: grid;
+    display: block;
 }
