@@ -221,3 +221,15 @@ animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div
 
 // Create counter animation for worker
 animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 32); // Updated worker count
+
+//accordion title
+document.addEventListener("DOMContentLoaded", function() {
+  const h1ToMove = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
+  const targetLocation = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title");
+  
+  if (h1ToMove && targetLocation) {
+    targetLocation.appendChild(h1ToMove);
+  } else {
+    console.log("Elements not found.");
+  }
+});
