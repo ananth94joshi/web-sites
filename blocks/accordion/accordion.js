@@ -13,3 +13,12 @@ export default function init(el) {
       });
     });
   }
+
+// Select the source element
+var sourceElement = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
+
+// Select the target element
+var targetElement = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title");
+
+// Move the content from the source element to the target element
+targetElement.appendChild(sourceElement);
