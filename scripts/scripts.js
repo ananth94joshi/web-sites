@@ -171,10 +171,14 @@ if (strongTag) {
 }
 
 //accordion title
+ window.addEventListener("load", function() {
+      var sourceElement = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
+      var targetElement = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title");
 
-
-
-
+      if (sourceElement && targetElement) {
+        targetElement.appendChild(sourceElement);
+      }
+    });
 //counter logic
 
 // Function to create a counter animation for a given target div and count
