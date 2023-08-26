@@ -9,3 +9,10 @@ if (elementToMove && insertionPoint) {
 } else {
   console.log("One or both elements not found.");
 }
+const targetElement = document.querySelector("body > main > div:nth-child(2)");
+
+if (targetElement) {
+  targetElement.style.display = "none";
+} else {
+  console.log("Element not found.");
+}
