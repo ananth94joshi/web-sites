@@ -151,6 +151,49 @@ newRow.appendChild(appendFormContainerForm);
 appendParentFormContainer.appendChild(newRow);
 //bootstrap classes 
 
+document.addEventListener("DOMContentLoaded", function() {
+    var footerContainer = document.querySelector("body > footer > div > div > div > div");
+    console.log("Footer Container:", footerContainer);
+
+    if (footerContainer) {
+        footerContainer.classList.add('container');
+    }
+
+    var footerRow = document.querySelector("body > footer > div > div > div > div > div");
+    console.log("Footer Row:", footerRow);
+
+    if (footerRow) {
+        footerRow.classList.add('row', 'gy-4');
+    }
+
+    var footerAbout = document.querySelector("body > footer > div > div > div > div > div > div:nth-child(1)");
+    console.log("Footer About:", footerAbout);
+
+    if (footerAbout) {
+        footerAbout.classList.add('col-lg-5', 'col-md-12');
+    }
+
+    var footerUsefulLinks = document.querySelector("body > footer > div > div > div > div > div > div:nth-child(2)");
+    console.log("Footer Useful Links:", footerUsefulLinks);
+
+    if (footerUsefulLinks) {
+        footerUsefulLinks.classList.add('col-lg-2', 'col-6');
+    }
+
+    var footerServices = document.querySelector("body > footer > div > div > div > div > div > div:nth-child(3)");
+    console.log("Footer Services:", footerServices);
+
+    if (footerServices) {
+        footerServices.classList.add('col-lg-2', 'col-6');
+    }
+
+    var footerContactUs = document.querySelector("body > footer > div > div > div > div > div > div:nth-child(4)");
+    console.log("Footer Contact Us:", footerContactUs);
+
+    if (footerContactUs) {
+        footerContactUs.classList.add('col-lg-3', 'col-md-12');
+    }
+});
 
 
 const selectBody = document.querySelector('body');
