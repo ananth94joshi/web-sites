@@ -716,8 +716,10 @@ body > main > div.section.columns-container.counter-container.buttons-container.
     border-radius:5px;
     color:black;
 }
-
-//greefin css changes
+body > main > div:nth-child(2)
+{
+display:none;
+}	//greefin css changes
 body > main > div:nth-child(11) {
     color: #212529;
     background-color: #ffffff;
