@@ -171,14 +171,21 @@ if (strongTag) {
 }
 
 //accordion title
-window.onload = function() {
-  var sourceH1 = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
-  var targetDiv = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title");
+document.addEventListener("DOMContentLoaded", function() {
+    // Select the source h1 element
+    const sourceH1 = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
 
-  if (sourceH1 && targetDiv) {
-    targetDiv.textContent = sourceH1.textContent;
-  }
-};
+    // Select the target element
+    const targetElement = document.querySelector("body > main > div.section.accordion-container > div:nth-child(2) > div > div.item-title.open");
+
+    if (sourceH1 && targetElement) {
+        // Append the source h1 to the target element
+        targetElement.appendChild(sourceH1);
+    } else {
+        console.log("Source h1 or target element not found.");
+    }
+});
+
 
 //counter logic
 
