@@ -11,10 +11,7 @@ export default function init(el) {
       title.addEventListener('click', () => {
         title.classList.toggle('open');
       });
-    });
-  }
-
-// Select the source element
+        // Select the source element
 var sourceElement = document.querySelector("#non-consectetur-a-erat-nam-at-lectus-urna-duis");
 
 // Select the target element
@@ -22,3 +19,7 @@ var targetElement = document.querySelector("body > main > div.section.accordion-
 
 // Move the content from the source element to the target element
 targetElement.appendChild(sourceElement);
+    });
+  }
+
+
