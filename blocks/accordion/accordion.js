@@ -14,6 +14,11 @@ export default function init(el) {
         // Select the source element
 
     });
+    //accordion
+var activeAccordion = document.querySelector('body > main > div.section.accordion-container .accordion-wrapper .item-title');
+if(activeAccordion !== null)
+    document.querySelector('body > main > div.section.accordion-container .accordion-wrapper .item-title').classList.add('open');
+
   }
 
 
