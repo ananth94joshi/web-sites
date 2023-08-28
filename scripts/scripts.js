@@ -262,3 +262,8 @@ animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div
 // Create counter animation for worker
 animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 32); // Updated worker count
 
+//accordion
+var activeAccordion = document.querySelector('body > main > div.section.accordion-container .accordion-wrapper .item-title');
+if(activeAccordion !== null)
+    document.querySelector('body > main > div.section.accordion-container .accordion-wrapper .item-title').classList.add('open');
+
