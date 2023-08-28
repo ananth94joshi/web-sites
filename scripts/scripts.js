@@ -133,10 +133,7 @@ import {
   }
   loadPage();
 
-  // Function to insert an element after another element
-  function insertAfter(newNode, referenceNode) {
-      referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-  }
+
   //scripts for contact form
   var appendParentFormContainer = document.querySelector("body > main > div.section.cards-container.forms-container");
   var appendFormContainer = document.querySelector("body > main > div.section.cards-container.forms-container > div.cards-wrapper");
