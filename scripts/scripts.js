@@ -170,10 +170,10 @@ import {
     // var footerContactUs = document.querySelector("body > footer > div > div > div > div > div > div:nth-child(4)");
     // footerContactUs.classList.add('col-lg-3', 'col-md-12');
     
-    var testimonialContainer = document.querySelector("body > main > div:nth-child(13) > div");
-    var testimonialsTitle = document.querySelector("body > main > div:nth-child(13) > div.default-content-wrapper > h2#testimonials");
-    var testimonialDesc = document.querySelector("body > main > div:nth-child(13) > div.default-content-wrapper > p:nth-child(2)");
-    var testimonialCaro = document.querySelector("body > main > div:nth-child(13) > div > p:nth-child(3)");
+var testimonialContainer = document.querySelector("body > main > div.section.carsouel-container> div.default-content-wrapper");
+    var testimonialsTitle = document.querySelector("body > main > div.section.carsouel-container > div.default-content-wrapper > h2#testimonials");
+    var testimonialDesc = document.querySelector("body > main > div.section.carsouel-container > div.default-content-wrapper > p:nth-child(2)");
+    var testimonialCaro = document.querySelector("body > main > div:nth-child(13) > div.carsouel-wrapper");
     var testimonialNewRow = document.createElement('div');
     testimonialNewRow.classList.add('col-lg-5');
     testimonialNewRow.appendChild(testimonialsTitle);
