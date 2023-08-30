@@ -163,3 +163,7 @@
     position: relative;
     top: 62%;
 }
+#slick-slide00 > div > p:nth-child(3){
+        position: relative;
+    left: 35%;
+}
