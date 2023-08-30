@@ -117,3 +117,49 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+//image fit into slider
+#slick-slide00 > div > p:nth-child(3){
+    position: absolute;
+    display: block;
+    left: 9%;
+    top: 21%;
+    margin-top: 0px;
+}
+#slick-slide00 > div > p:nth-child(1) > picture > img{
+    display: inline-block;
+    left: 7%;
+    position: absolute;
+    border-radius: 50px;
+    border: 6px solid var(--color-background);
+    margin-right: 10px;
+}
+#slick-slide00 > div > p:nth-child(1) > picture{
+        width: 56px;
+    height: 90px;
+    display: inline;
+    left: 7%;
+    position: absolute;
+    border-radius: 50px;
+    border: 6px solid var(--color-background);
+    margin-right: 10px;
+}
+#slick-slide00 > div > p:nth-child(2){
+        display: inline-block;
+    position: relative;
+    left: 35%;
+    top: 10%;
+}
+#slick-slide00 > div > p:nth-child(4){
+        display: block;
+    position: relative;
+    left: 35%;
+    top: 73%;
+}
+#slick-slide00 > div > p:nth-child(5){
+        display: block;
+    left: 35%;
+    width: 50%;
+    position: relative;
+    top: 62%;
+}
