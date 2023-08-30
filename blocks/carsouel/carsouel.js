@@ -9,9 +9,7 @@ $(document).ready(function() {
         variableWidth: true,
         autoplay: true,
         autoplaySpeed: 2000,
-
         slidesToShow: 3
-
     });
     //$('.slides').slickPlay();
 
