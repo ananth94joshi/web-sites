@@ -51,5 +51,5 @@ animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div
 animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(3)", 1453); // Updated support count
 
 // Create counter animation for worker
-animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 132); // Updated worker count
+animateCounter("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)", 32); // Updated worker count
 }
