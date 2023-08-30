@@ -272,3 +272,21 @@ const fourthInterval = setInterval(() => {
   }
 }, 10); // Change the interval duration (in milliseconds) for the desired animation speed
 
+//features
+var FeaturesContainer = document.querySelector("body > main > div:nth-child(7) > div.columns-wrapper > div > div:nth-child(1)");
+var FeaturesimageMobile = document.querySelector("body > main > div:nth-child(7) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)");
+	
+$(document).ready(function () {
+    updateContainer();
+    $(window).resize(function() {
+        updateContainer();
+    });
+});
+function updateContainer() {
+    
+	if ($(window).width() < 900) { 
+		FeaturesContainer.prepend(FeaturesimageMobile);
+	} else {
+		FeaturesContainer.appendChild(FeaturesimageMobile);
+	}
+}
