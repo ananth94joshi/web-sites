@@ -133,6 +133,8 @@ import {
   }
   loadPage();
 
+  document.addEventListener("DOMContentLoaded, function(){
+  
 //to move h3 in counter 
 // Select the elements
 var clientsElement = document.querySelector("#clients");
@@ -173,6 +175,7 @@ if (clientsElement && projectElement && supportElement && workersElement && clie
     console.log("One or more elements/targets not found.");
 }
 
+  }");
 
   //scripts for contact form
   var appendParentFormContainer = document.querySelector("body > main > div.section.cards-container.forms-container");
