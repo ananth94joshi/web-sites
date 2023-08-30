@@ -34,7 +34,6 @@
 body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li {
 	position: absolute;
 	flex: 0 0 auto;
-    width: 33.33333333%;
 	border:none;
 }
 
@@ -108,55 +107,55 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 @media only screen and (min-width: 600px) {
   body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(1) {
 		transform: translateX(0px);
-		width: 33.333%;
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(2) {
-		transform: translateX(100%);
-		width: 33.333%;
+		transform: translateX(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateX(200%);
-		width: 33.333%;
+		transform: translateX(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translateY(72%);
-		width: 33.333%;
+		transform: translateY(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translate(100%, 50%);
-		width: 33.333%;
+		transform: translate(0%, -22%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translate(200%, 90%);
-		width: 33.333%;
+		transform: translate(0%, -60%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translate(200%, 192%);
-		width: 33.333%;
+		transform: translate(0%, 5%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translate(200%, 285%);
-		width: 33.333%;
+		transform: translate(0%, -40%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translate(100%, 294%);
-		width: 33.333%;
+		transform: translate(0%, -164%);
+		height: fit-content;
 		overflow: hidden;
 	}
 	
@@ -171,55 +170,55 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 @media only screen and (min-width: 768px) {
   body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(1) {
 		transform: translateX(0px);
-		width: 33.333%;
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(2) {
-		transform: translateX(100%);
-		width: 33.333%;
+		transform: translateX(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateX(200%);
-		width: 33.333%;
+		transform: translateX(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translateY(70%);
-		width: 33.333%;
+		transform: translateY(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translate(100%, 50%);
-		width: 33.333%;
+		transform: translate(0%, -22%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translate(200%, 90%);
-		width: 33.333%;
+		transform: translate(0%, -60%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translate(200%, 195%);
-		width: 33.333%;
+		transform: translate(0%, 5%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translate(200%, 290%);
-		width: 33.333%;
+		transform: translate(0%, -40%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translate(100%, 315%);
-		width: 33.333%;
+		transform: translate(0%, -164%);
+		height: fit-content;
 		overflow: hidden;
 	}
 	
@@ -235,55 +234,55 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 @media only screen and (min-width: 992px) {
   body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(1) {
 		transform: translateX(0px);
-		width: 33.333%;
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(2) {
-		transform: translateX(100%);
-		width: 33.333%;
+		transform: translateX(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateX(200%);
-		width: 33.333%;
+		transform: translateX(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translateY(70%);
-		width: 33.333%;
+		transform: translateY(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translate(100%, 50%);
-		width: 33.333%;
+		transform: translate(0%, -22%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translate(200%, 90%);
-		width: 33.333%;
+		transform: translate(0%, -60%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translate(200%, 195%);
-		width: 33.333%;
+		transform: translate(0%, 5%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translate(200%, 290%);
-		width: 33.333%;
+		transform: translate(0%, -40%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translate(100%, 315%);
-		width: 33.333%;
+		transform: translate(0%, -164%);
+		height: fit-content;
 		overflow: hidden;
 	}
 	
@@ -297,67 +296,62 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 @media only screen and (min-width: 1200px) {
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(1) {
 		transform: translateX(0px);
-		width: 33.333%;
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(2) {
-		transform: translateX(100%);
-		width: 33.333%;
+		transform: translateX(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateX(200%);
-		width: 33.333%;
+		transform: translateX(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translateY(70%);
-		width: 33.333%;
+		transform: translateY(0%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translate(100%, 50%);
-		width: 33.333%;
+		transform: translate(0%, -22%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translate(200%, 90%);
-		width: 33.333%;
+		transform: translate(0%, -60%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translate(200%, 195%);
-		width: 33.333%;
+		transform: translate(0%, 5%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translate(200%, 290%);
-		width: 33.333%;
+		transform: translate(0%, -40%);
+		height: fit-content;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translate(100%, 315%);
-		width: 33.333%;
+		transform: translate(0%, -164%);
+		height: fit-content;
 		overflow: hidden;
 	}
 	
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul {
 		position: relative;
-		height: 980px;
+		height: 1250px;
 		overflow: hidden;
-	}
-	
-	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul {
-		position: relative;
-		height: 1200px;
 	}
 }
 
@@ -379,7 +373,21 @@ body > main > div.section.columns-container.cards-container > div.columns-wrappe
     color: #ffffff;
 }
 
- 
+body > main > div.section.columns-container.cards-container > div.columns-wrapper > div > div > div:not(:nth-child(1)) > a {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 20px 10px 20px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 5px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    font-family: "Lato", sans-serif;
+    background-color: #ffffff;
+    color: #212529;
+}
 
 body > main > div.section.columns-container.cards-container > div.columns-wrapper > div > div > div:nth-child(1) > a {
     background: #e84545;
@@ -425,4 +433,3 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
     padding-right: 50px;
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
