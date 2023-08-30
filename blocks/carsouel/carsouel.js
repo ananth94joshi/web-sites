@@ -6,7 +6,7 @@ $(document).ready(function() {
         speed: 300,
         centerPadding: '60px',
         centerMode: true,
-        variableWidth: false,
+        variableWidth: true,
         autoplay: true,
         autoplaySpeed: 2000,
 
