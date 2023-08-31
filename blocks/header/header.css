@@ -830,3 +830,189 @@ header nav .nav-sections > ul > li:hover > ul {
 }
 
 /* Header */
+//postion for drop down
+/* Extra small devices (phones) */
+@media only screen and (max-width: 575px) {
+  body > main > div.section.hero-container > div > div > div > div > h1 {
+    position: relative;
+    top: 50px;
+    left: 0px;
+    font-size: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div {
+	position: relative;
+    top: 45px;
+    left: 0px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong {
+	position: relative;
+    top: 10px;
+    left: 0px;
+    width: 100%;  
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
+	position: relative;
+    right: 95px;
+    top: -8px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
+	width: 100%; 
+  }
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  body > main > div.section.hero-container > div > div > div > div > h1 {
+    position: relative;
+    top: 50px;
+    left: 0px;
+    font-size: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div {
+	position: relative;
+    top: 45px;
+    left: 0px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong {
+	position: relative;
+    top: 10px;
+    left: 0px;
+    width: 100%;  
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
+	position: relative;
+    right: 95px;
+    top: -8px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
+	width: 100%; 
+  }
+}
+
+/* Medium devices (laptops, desktops) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body > main > div.section.hero-container > div > div > div > div > h1 {
+    position: relative;
+    top: 50px;
+    left: 0px;
+    font-size: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div {
+	position: relative;
+    top: 45px;
+    left: 0px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong {
+	position: relative;
+    top: 10px;
+    left: 0px;
+    width: 100%;  
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
+	position: relative;
+    right: 95px;
+    top: -8px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
+	width: 100%; 
+  }
+}
+
+/* Large devices (large desktops, wide screens) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body > main > div.section.hero-container > div > div > div > div > h1 {
+    position: relative;
+    top: 50px;
+    left: 0px;
+    font-size: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div {
+	position: relative;
+    top: 45px;
+    left: 0px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong {
+	position: relative;
+    top: 10px;
+    left: 0px;
+    width: 100%;  
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
+	position: relative;
+    right: 95px;
+    top: -8px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
+	width: 100%; 
+  }
+}
+
+/* Extra large devices (ultra-wide screens) */
+@media only screen and (min-width: 1200px) {
+  body > main > div.section.hero-container > div > div > div > div > h1 {
+    position: relative;
+    top: 50px;
+    left: 150px;
+    font-size: 44px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div {
+	position: relative;
+    top: 45px;
+    left: 150px;
+    font-size: 20px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong {
+	position: relative;
+    top: 10px;
+    left: -75px;
+    width: 100%;  
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
+	position: relative;
+    right: 112px;
+    top: -8px;
+  }
+  
+  body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
+	width: 70%; 
+  }
+}
