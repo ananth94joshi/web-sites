@@ -2394,3 +2394,33 @@ body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > 
 	}
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a  {
+text-overflow: unset;
+}
+}
+
+ 
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) { 
+body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a  {
+text-overflow: unset;
+}
+}
+
+ 
+
+@media only screen and (min-width: 576px) and (max-width: 767px) { 
+body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a  {
+text-overflow: unset;
+}
+}
+
+ 
+
+@media only screen and (max-width: 575px)  {
+body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a  {
+text-overflow: unset;
+}
+}
+
