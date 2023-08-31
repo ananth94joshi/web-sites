@@ -1825,18 +1825,18 @@ body > main > div.section.hero-container > div > div > div > div > div > p.butto
 
 body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
 	position: relative;
-    right: 112px;
-    top: -8px;
-    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
-    background-color: #e84545;
-    border-color: #e84545;
-    padding: 8px 20px 10px 20px;
-    border-radius: 7px;
-    color: #ffffff;
-    font-family: var(--bs-btn-font-family);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
+	right: 112px;
+	top: -8px;
+	box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+	background-color: #e84545;
+	border-color: #e84545;
+	padding: 8px 20px 10px 20px;
+	border-radius: 7px;
+	color: #ffffff;
+	font-family: var(--bs-btn-font-family);
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
 }
 
 body > main > div:nth-child(11) {
@@ -2106,9 +2106,10 @@ flex-direction:unset;}
   
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
 	position: relative;
-    right: 95px;
-    top: -8px;
-  }
+	right: 105px;
+	top: -8px;
+	padding: 8px 30px 8px 20px;
+	}
   
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
 	width: 100%; 
@@ -2144,9 +2145,10 @@ flex-direction:unset;}
   
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
 	position: relative;
-    right: 95px;
-    top: -8px;
-  }
+	right: 112px;
+	top: -8px;
+	padding: 8px 30px 8px 20px;
+	}
   
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
 	width: 100%; 
@@ -2182,9 +2184,10 @@ flex-direction:unset;}
   
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
 	position: relative;
-    right: 95px;
-    top: -8px;
-  }
+	right: 110px;
+	top: -8px;
+	padding: 8px 30px 8px 20px;
+	}
   
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
 	width: 100%; 
@@ -2220,9 +2223,10 @@ flex-direction:unset;}
   
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
 	position: relative;
-    right: 95px;
-    top: -8px;
-  }
+	right: 110px;
+	top: -8px;
+	padding: 8px 30px 8px 20px;
+	}
   
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
 	width: 100%; 
@@ -2254,9 +2258,9 @@ flex-direction:unset;}
   
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > a {
 	position: relative;
-    right: 112px;
-    top: -8px;
-  }
+	right: 120px;
+	top: -8px;
+	}
   
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
 	width: 70%; 
@@ -2293,6 +2297,7 @@ body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > 
     border-radius: 50px;
     border: 6px solid #f4f4f4;
     margin-right: 10px;
+	transform: translate(0px, 95px);
 }
 
 body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div > div > p:nth-child(2) {
@@ -2301,6 +2306,7 @@ body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > 
     font-weight: bold;
     margin: 10px 0 5px 0;
 	font-family: "Montserrat", sans-serif;
+	transform: translate(110px, 0px);
 }
 
 body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div > div > p:nth-child(3) {
@@ -2308,6 +2314,11 @@ body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > 
     font-size: 14px;
     margin: 0;
 	font-family: "Montserrat", sans-serif;
+	transform: translate(110px, 0px);
+}
+
+body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div > div > p:nth-child(4) {
+	transform: translate(110px, 0px);
 }
 
 body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div > div > p:nth-child(5) {
@@ -2318,6 +2329,7 @@ body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > 
 	body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
 		margin-left: 90px;
 		margin-right: 90px;
+		margin-top: -60px;
 		width: 0.9%;
 		transform: translate(-10px, 10px);
 	}
@@ -2327,6 +2339,7 @@ body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > 
 	body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
 		margin-left: 120px;
 		margin-right: 120px;
+		margin-top: -60px;
 		width: 1.7%;
 		transform: translate(-10px, 10px);
 	}
@@ -2336,6 +2349,7 @@ body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > 
 	body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
 		margin-left: 65px;
 		margin-right: 65px;
+		margin-top: -60px;
 		width: 2.7%;
 		transform: translate(-10px, 10px);
 	}
@@ -2345,9 +2359,20 @@ body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > 
 	body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
 		margin-left: 90px;
 		margin-right: 90px;
+		margin-top: -60px;
 		width: 1.7%;
 		transform: translate(-10px, 10px);
 	}
+}
+
+@media only screen and (min-width: 1200px) {
+    body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
+        margin-left: 90px;
+        margin-right: 90px;
+		margin-top: -60px;
+        width: 1.7%;
+        transform: translate(-10px, 10px);
+    }
 }
 
 /*testimonial*/
@@ -2368,11 +2393,4 @@ body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > 
 		padding-right: 20px;
 	}
 }
-@media only screen and (min-width: 1200px) {
-    body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
-        margin-left: 90px;
-        margin-right: 90px;
-        width: 1.7%;
-        transform: translate(-10px, 10px);
-    }
-}
+
