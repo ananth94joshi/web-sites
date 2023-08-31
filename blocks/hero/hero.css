@@ -47,7 +47,7 @@ main .hero img {
 
 //postion for banner content
 /* Extra small devices (phones) */
-@media only screen and (max-width: 575px) {
+@media only screen and (min-width: 0px) and (max-width: 575px) {
   body > main > div.section.hero-container > div > div > div > div > h1 {
     position: relative;
     top: 50px;
