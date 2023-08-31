@@ -308,7 +308,7 @@ main .section.highlight {
   color: #fff;
 }
 
-//Global level css change
+/*Global level css change*/
 
 body > main > div.section.columns-container.counter-container > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(1){
     margin-top:20%;
@@ -720,7 +720,7 @@ body > main > div:nth-child(2)
 {
 display:none;
 }	
-//greefin css changes
+/*greefin css changes*/
 body > main > div:nth-child(11) {
     color: #212529;
     background-color: #ffffff;
@@ -1961,7 +1961,7 @@ div.section.accordion-container:after {
         margin: auto;
     }
 }
-//gopi 
+/*gopi */
 /* card alignment for aboust us section */
 
 body > main > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(2) {
@@ -2075,9 +2075,10 @@ body > main > div:nth-child(3) > div > div > div {
 flex-wrap: wrap;
 flex-direction:unset;}
 }
-//postion for banner content
+
+/* postion for banner content */
 /* Extra small devices (phones) */
-@media only screen and (min-width: 0px) and (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   body > main > div.section.hero-container > div > div > div > div > h1 {
     position: relative;
     top: 50px;
@@ -2260,4 +2261,110 @@ flex-direction:unset;}
   body > main > div.section.hero-container > div > div > div > div > div > p.button-container > strong > input {
 	width: 70%; 
   }
+}
+
+/* Header Mobile Dropdown */
+@media only screen and (max-width: 900px) {
+	body > header > div > nav > div.nav-sections > ul > li.nav-drop {
+		display: list-item;
+	}
+	body > header > div > nav > div.nav-sections > ul {
+		position: static;
+		z-index: 99;
+		padding: 10px 0;
+		width: 100%;
+		margin: 0px 0px;
+		inset: 60px 20px 20px 20px;
+	}
+	
+	body > header > div > nav > div.nav-sections > ul > li.nav-drop > ul {
+		position: static;
+		z-index: 99;
+		padding: 10px 0;
+		width: 100%;
+		margin: 0px 0px;
+		inset: 60px 20px 20px 20px;
+	}
+}
+
+body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div > div > p:nth-child(1) > picture > img {
+	width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    border: 6px solid #f4f4f4;
+    margin-right: 10px;
+}
+
+body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div > div > p:nth-child(2) {
+	color: #32353a;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div > div > p:nth-child(3) {
+	color: rgba(33, 37, 41, 0.5);
+    font-size: 14px;
+    margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div > div > p:nth-child(5) {
+	font-style: italic;
+}
+
+@media only screen and (max-width: 479px) {
+	body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
+		margin-left: 90px;
+		margin-right: 90px;
+		width: 0.9%;
+		transform: translate(-10px, 10px);
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
+		margin-left: 120px;
+		margin-right: 120px;
+		width: 1.7%;
+		transform: translate(-10px, 10px);
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
+		margin-left: 65px;
+		margin-right: 65px;
+		width: 2.7%;
+		transform: translate(-10px, 10px);
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
+		margin-left: 90px;
+		margin-right: 90px;
+		width: 1.7%;
+		transform: translate(-10px, 10px);
+	}
+}
+
+/*testimonial*/
+@media only screen and (max-width: 991px) {
+	body > main > div.section.carsouel-container > div > div.col-lg-5 {
+		margin-top: 0px;
+	}
+}
+@media only screen and (min-width: 992px) {
+	body > main > div.section.carsouel-container > div > div.col-lg-5 {
+		margin-top: 80px;
+	}
+}
+
+@media only screen and (max-width: 899px) {
+	body > main > div:nth-child(11) > div.columns-wrapper > div {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
