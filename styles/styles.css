@@ -2368,3 +2368,11 @@ body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > 
 		padding-right: 20px;
 	}
 }
+@media only screen and (min-width: 1200px) {
+    body > main > div.section.carsouel-container > div > div.col-lg-7 > div > div > div > div > div {
+        margin-left: 90px;
+        margin-right: 90px;
+        width: 1.7%;
+        transform: translate(-10px, 10px);
+    }
+}
