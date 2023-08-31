@@ -34,7 +34,13 @@
 body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li {
 	position: absolute;
 	flex: 0 0 auto;
+    width: 33.33333333%;
 	border:none;
+}
+
+body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li > div {
+	padding-left: 10px;
+    padding-right: 10px;
 }
 
 body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li > div > p > picture > img {
@@ -107,55 +113,55 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 @media only screen and (min-width: 600px) {
   body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(1) {
 		transform: translateX(0px);
-		height: fit-content;
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(2) {
-		transform: translateX(0%);
-		height: fit-content;
+		transform: translateX(100%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateX(0%);
-		height: fit-content;
+		transform: translateX(200%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translateY(0%);
-		height: fit-content;
+		transform: translateY(72%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translate(0%, -22%);
-		height: fit-content;
+		transform: translate(100%, 50%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translate(0%, -60%);
-		height: fit-content;
+		transform: translate(200%, 90%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translate(0%, 5%);
-		height: fit-content;
+		transform: translate(200%, 192%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translate(0%, -40%);
-		height: fit-content;
+		transform: translate(200%, 285%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translate(0%, -164%);
-		height: fit-content;
+		transform: translate(100%, 294%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 	
@@ -170,55 +176,55 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 @media only screen and (min-width: 768px) {
   body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(1) {
 		transform: translateX(0px);
-		height: fit-content;
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(2) {
-		transform: translateX(0%);
-		height: fit-content;
+		transform: translateX(100%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateX(0%);
-		height: fit-content;
+		transform: translateX(200%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translateY(0%);
-		height: fit-content;
+		transform: translateY(70%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translate(0%, -22%);
-		height: fit-content;
+		transform: translate(100%, 50%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translate(0%, -60%);
-		height: fit-content;
+		transform: translate(200%, 90%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translate(0%, 5%);
-		height: fit-content;
+		transform: translate(200%, 195%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translate(0%, -40%);
-		height: fit-content;
+		transform: translate(200%, 290%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translate(0%, -164%);
-		height: fit-content;
+		transform: translate(100%, 315%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 	
@@ -234,55 +240,55 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 @media only screen and (min-width: 992px) {
   body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(1) {
 		transform: translateX(0px);
-		height: fit-content;
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(2) {
-		transform: translateX(0%);
-		height: fit-content;
+		transform: translateX(100%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateX(0%);
-		height: fit-content;
+		transform: translateX(200%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translateY(0%);
-		height: fit-content;
+		transform: translateY(70%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translate(0%, -22%);
-		height: fit-content;
+		transform: translate(100%, 50%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translate(0%, -60%);
-		height: fit-content;
+		transform: translate(200%, 90%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translate(0%, 5%);
-		height: fit-content;
+		transform: translate(200%, 195%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translate(0%, -40%);
-		height: fit-content;
+		transform: translate(200%, 290%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translate(0%, -164%);
-		height: fit-content;
+		transform: translate(100%, 315%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 	
@@ -296,62 +302,67 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 @media only screen and (min-width: 1200px) {
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(1) {
 		transform: translateX(0px);
-		height: fit-content;
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(2) {
-		transform: translateX(0%);
-		height: fit-content;
+		transform: translateX(100%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateX(0%);
-		height: fit-content;
+		transform: translateX(200%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translateY(0%);
-		height: fit-content;
+		transform: translateY(70%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translate(0%, -22%);
-		height: fit-content;
+		transform: translate(100%, 50%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translate(0%, -60%);
-		height: fit-content;
+		transform: translate(200%, 90%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translate(0%, 5%);
-		height: fit-content;
+		transform: translate(200%, 195%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translate(0%, -40%);
-		height: fit-content;
+		transform: translate(200%, 290%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translate(0%, -164%);
-		height: fit-content;
+		transform: translate(100%, 335%);
+		width: 33.333%;
 		overflow: hidden;
 	}
 	
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul {
 		position: relative;
-		height: 1250px;
+		height: 980px;
 		overflow: hidden;
+	}
+	
+	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul {
+		position: relative;
+		height: 1200px;
 	}
 }
 
@@ -414,8 +425,6 @@ body > main > div.section.columns-container.cards-container > div.columns-wrappe
   }
 }
 
- 
-
 body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li > div > h4 {
     color: #32353a;
     font-size: 18px;
@@ -423,8 +432,6 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
     padding-right: 50px;
     font-family: "Montserrat", sans-serif;
 }
-
- 
 
 #portfolio > div:nth-child(2) > div > div > div > div > p {
     color: #212529;
