@@ -30,7 +30,7 @@
   object-fit: cover;
 }
 
-//portfolio
+/*portfolio*/
 body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li {
 	position: absolute;
 	flex: 0 0 auto;
