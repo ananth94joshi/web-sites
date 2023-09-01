@@ -114,57 +114,61 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(2) {
-		transform: translateY(150%);
+		transform: translateY(45vh);
 		width: 100%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateY(296%);
+		transform: translateY(90vh);
 		width: 100%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translateY(163%);
+		transform: translateY(135vh);
 		width: 100%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translateY(262%);
+		transform: translateY(180vh);
 		width: 100%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translateY(772%);
+		transform: translateY(225vh);
 		width: 100%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translateY(890%);
+		transform: translateY(270vh);
 		width: 100%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translateY(975%);
+		transform: translateY(315vh);
 		width: 100%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translateY(1073%);
+		transform: translateY(360vh);
 		width: 100%;
 		overflow: hidden;
 	}
 	
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul {
 		position: relative;
-		height: 690vh;
+		height: 405vh;
 		overflow: hidden;
+	}
+	
+	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li > div > p > picture > img {
+		height: 40vh;
 	}
 
 }
@@ -184,51 +188,55 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateY(172%);
+		transform: translateY(45vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translate(100%, 50%);
+		transform: translate(100%, 45vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translate(0%, 114%);
+		transform: translate(0%, 90vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translate(100%, 320%);
+		transform: translate(100%, 90vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translate(0%, 460%);
+		transform: translate(0%, 135vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translate(100%, 424%);
+		transform: translate(100%, 135vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translate(100%, 526%);
+		transform: translate(0%, 180vh);
 		width: 50%;
 		overflow: hidden;
 	}
 	
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul {
 		position: relative;
-		height: 280vh;
+		height: 225vh;
 		overflow: hidden;
+	}
+	
+	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li > div > p > picture > img {
+		height: 40vh;
 	}
 }
 
@@ -247,51 +255,55 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(3) {
-		transform: translateY(172%);
+		transform: translateY(45vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(4) {
-		transform: translate(100%, 50%);
+		transform: translate(100%, 45vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(5) {
-		transform: translate(0%, 114%);
+		transform: translate(0%, 90vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(6) {
-		transform: translate(100%, 320%);
+		transform: translate(100%, 90vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(7) {
-		transform: translate(0%, 460%);
+		transform: translate(0%, 135vh);
 		width: 50%;
 		overflow: hidden;
 	}
 
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(8) {
-		transform: translate(100%, 424%);
+		transform: translate(100%, 135vh);
 		width: 50%;
 		overflow: hidden;
 	}
-	
+
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li:nth-child(9) {
-		transform: translate(100%, 526%);
+		transform: translate(0%, 180vh);
 		width: 50%;
 		overflow: hidden;
 	}
 	
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul {
 		position: relative;
-		height: 360vh;
+		height: 225vh;
 		overflow: hidden;
+	}
+	
+	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li > div > p > picture > img {
+		height: 40vh;
 	}
 
 } 
@@ -356,6 +368,10 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 		position: relative;
 		height: 980px;
 	}
+	
+	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li > div > p > picture > img {
+		height: unset;
+	}
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -416,13 +432,12 @@ body > main > div.section.columns-container.cards-container > div.cards-wrapper 
 	
 	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul {
 		position: relative;
-		height: 980px;
+		height: 1200px;
 		overflow: hidden;
 	}
 	
-	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul {
-		position: relative;
-		height: 1200px;
+	body > main > div.section.columns-container.cards-container > div.cards-wrapper > div > ul > li > div > p > picture > img {
+		height: unset;
 	}
 }
 
