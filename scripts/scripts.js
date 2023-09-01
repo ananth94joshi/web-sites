@@ -184,4 +184,87 @@ var testimonialContainer = document.querySelector("body > main > div.section.car
     testimonialContainer.appendChild(testimonialNewCarousal);
     testimonialContainer.classList.add('row');
     
-  
+  //counter
+
+// First element
+const firstElement = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(1)");
+firstElement.classList.add("client");
+
+let firstCount = 0;
+const firstTargetCount = 232;
+
+const firstInterval = setInterval(() => {
+  if (firstCount <= firstTargetCount) {
+    firstElement.textContent = firstCount;
+    firstCount++;
+  } else {
+    clearInterval(firstInterval);
+  }
+}, 10); // Change the interval duration (in milliseconds) for the desired animation speed
+
+// Second element
+const secondElement = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)");
+secondElement.classList.add("project");
+
+let secondCount = 0;
+const secondTargetCount = 521;
+
+const secondInterval = setInterval(() => {
+  if (secondCount <= secondTargetCount) {
+    secondElement.textContent = secondCount;
+    secondCount++;
+  } else {
+    clearInterval(secondInterval);
+  }
+}, 10); // Change the interval duration (in milliseconds) for the desired animation speed
+
+// Third element
+const thirdElement = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(3)");
+thirdElement.classList.add("support");
+
+let thirdCount = 0;
+const thirdTargetCount = 1453;
+
+const thirdInterval = setInterval(() => {
+  if (thirdCount <= thirdTargetCount) {
+    thirdElement.textContent = thirdCount;
+    thirdCount++;
+  } else {
+    clearInterval(thirdInterval);
+  }
+}, 10); // Change the interval duration (in milliseconds) for the desired animation speed
+
+// Fourth element
+const fourthElement = document.querySelector("body > main > div:nth-child(5) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(4)");
+fourthElement.classList.add("workers");
+
+let fourthCount = 0;
+const fourthTargetCount = 32;
+
+const fourthInterval = setInterval(() => {
+  if (fourthCount <= fourthTargetCount) {
+    fourthElement.textContent = fourthCount;
+    fourthCount++;
+  } else {
+    clearInterval(fourthInterval);
+  }
+}, 10); // Change the interval duration (in milliseconds) for the desired animation speed
+
+//features
+var FeaturesContainer = document.querySelector("body > main > div:nth-child(7) > div.columns-wrapper > div > div:nth-child(1)");
+var FeaturesimageMobile = document.querySelector("body > main > div:nth-child(7) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)");
+	
+$(document).ready(function () {
+    updateContainer();
+    $(window).resize(function() {
+        updateContainer();
+    });
+});
+function updateContainer() {
+    
+	if ($(window).width() < 900) { 
+		FeaturesContainer.prepend(FeaturesimageMobile);
+	} else {
+		FeaturesContainer.appendChild(FeaturesimageMobile);
+	}
+}
