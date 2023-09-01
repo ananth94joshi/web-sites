@@ -26,7 +26,7 @@ if (strongTag) {
         // Create a new input element
         inputElement = document.createElement("input");
         inputElement.type = "email"; // Set input type to 'email'
-        inputElement.placeholder = "Enter your email address"; // Set the placeholder text
+        inputElement.placeholder = "Enter email address"; // Set the placeholder text
         inputElement.className = "enteryouremail"; // Add a class to the input element
 
         // Add the input element to the existing strong tag
