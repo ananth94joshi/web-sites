@@ -63,6 +63,6 @@ main .embed .embed-placeholder-play button::before {
   top: 4px;
   left: 7px;
 }
-#player > div.vp-player-ui-overlays > div.ControlBar_module_controlBarWrapper__ea0d6863 > div.vp-controls.ControlBar_module_controls__ea0d6863 > div > a > button > svg{
-    display:none;
+.vp-controls {
+    display: none;
 }
