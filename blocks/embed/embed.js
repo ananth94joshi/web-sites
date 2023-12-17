@@ -111,17 +111,4 @@ export default function decorate(block) {
     observer.observe(block);
   }
 }
-window.onload = function() {
-  const button = document.querySelector("#player > div.vp-player-ui-overlays > div.ControlBar_module_controlBarWrapper__ea0d6863 > div.vp-controls.ControlBar_module_controls__ea0d6863 > div > a > button");
-
-  if (button) {
-    button.style.display = "none";
-
-    button.addEventListener("click", function() {
-      this.querySelector("svg").style.display = "none";
-    });
-  } else {
-    console.warn("Element not found. Make sure the selector is correct.");
-  }
-};
-
+document.querySelector("#player > div.vp-player-ui-overlays > div.ControlBar_module_controlBarWrapper__ea0d6863 > div.vp-controls.ControlBar_module_controls__ea0d6863 > div > a > button").style.display = "none";
