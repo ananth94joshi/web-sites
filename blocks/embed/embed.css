@@ -64,5 +64,6 @@ main .embed .embed-placeholder-play button::before {
   left: 7px;
 }
 .vp-controls {
-    display: none;
+    display: none !important;
+    ;
 }
