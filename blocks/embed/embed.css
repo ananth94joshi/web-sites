@@ -66,3 +66,6 @@ main .embed .embed-placeholder-play button::before {
 .vp-controls {
     display: none !important;
 }
+.vp-controls.ControlBar_module_controls__ea0d6863 {
+    display: none;
+}
