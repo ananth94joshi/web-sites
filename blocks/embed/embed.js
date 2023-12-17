@@ -3,7 +3,7 @@
  * Show videos and social posts directly on your page
  * https://www.hlx.live/developer/block-collection/embed
  */
-document.querySelector("#player > div.vp-player-ui-overlays > div.ControlBar_module_controlBarWrapper__ea0d6863 > div.vp-controls.ControlBar_module_controls__ea0d6863 > div > a > button").style.display = "none";
+
 const loadScript = (url, callback, type) => {
   const head = document.querySelector('head');
   const script = document.createElement('script');
