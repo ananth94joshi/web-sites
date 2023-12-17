@@ -111,3 +111,10 @@ export default function decorate(block) {
     observer.observe(block);
   }
 }
+const hideButton = document.querySelector("#player > div.vp-player-ui-overlays > div.ControlBar_module_controlBarWrapper__ea0d6863 > div.vp-controls.ControlBar_module_controls__ea0d6863 > div > a > button > svg");
+
+if (hideButton) {
+  hideButton.style.display = "none";
+} else {
+  console.warn("Element not found. Make sure the selector is correct.");
+}
