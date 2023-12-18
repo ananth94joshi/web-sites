@@ -128,10 +128,10 @@ import {
   }
   
   async function loadPage() {
+	videoload();
     await loadEager(document);
     await loadLazy(document);
     loadDelayed();
-	    videoload();
   }
   loadPage();
 //scripts for contact form
