@@ -280,7 +280,7 @@ function videoload() {
   var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay loop></video>");
 
   // Set the source of the video element to the raw GitHub URL
-  newVideoElement.append("<source src='https://raw.githubusercontent.com/ananth94joshi/web-sites/main/Clouds_34_Timelapse.mp4' type='video/mp4'>");
+  newVideoElement.append("<source src='https://github.com/ananth94joshi/web-sites/blob/main/Clouds_34_Timelapse.mp4' type='video/mp4'>");
 
   // Append the new video element to the div
   $(".hero div div").append(newVideoElement);
