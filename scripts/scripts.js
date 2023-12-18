@@ -271,19 +271,50 @@ function updateContainer() {
 }
 
 
-$(document).ready(function() {
-  function videoload() {
-    $(".hero div div video").remove();
+// $(document).ready(function() {
+//   function videoload() {
+//     $(".hero div div video").remove();
 
-    var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay loop></video>");
-    newVideoElement.append("<source src='https://raw.githubusercontent.com/ananth94joshi/web-sites/main/Clouds_34_Timelapse.mp4' type='video/mp4'>");
+//     var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay loop></video>");
+//     newVideoElement.append("<source src='https://raw.githubusercontent.com/ananth94joshi/web-sites/main/Clouds_34_Timelapse.mp4' type='video/mp4'>");
 
-    $(".hero div div").append(newVideoElement);
-  }
+//     $(".hero div div").append(newVideoElement);
+//   }
 
-  // Call the function to load the video
-  videoload();
-});
+//   // Call the function to load the video
+//   videoload();
+// });
 
+// function videoload(newVideoSource) {
+//   // Remove any existing content inside the specified div with the class "hero"
+//   $(".hero div div picture").remove();
+  
+//   // Create a new video element with autoplay and controls
+//   var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay controls></video>");
+  
+//   // Set the source of the video element
+//   newVideoElement.append("<source src='" + newVideoSource + "' type='video/mp4'>");
+  
+//   // Append the new video element to the div
+//   $(".hero div div").append(newVideoElement);
+// }
+
+function videoload(newVideoSource) {
+  // Remove any existing content inside the specified div with the class "hero"
+  $(".hero div div picture").remove();
+  
+  // Create a new video element with autoplay and controls
+  var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay controls></video>");
+  
+  // Set the source of the video element to the new video source
+  newVideoElement.append("<source src='" + newVideoSource + "' type='video/mp4'>");
+  
+  // Append the new video element to the div
+  $(".hero div div").append(newVideoElement);
+}
+
+// Example: Call videoload with the desired video source URL
+// Replace the URL with your desired video source
+videoload('https://raw.githubusercontent.com/ananth94joshi/web-sites/main/Clouds_34_Timelapse.mp4');
 
 
