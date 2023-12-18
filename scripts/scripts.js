@@ -272,8 +272,24 @@ function updateContainer() {
 
 
 
+// function videoload() {
+//   $(".hero div div picture").remove();
+//   $(".hero div div").append("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;'autoplay controls><source src='movie.mp4' type='video/mp4'></video>");
+// }
+
 function videoload() {
+  // Remove any existing content inside the specified div with the class "hero"
   $(".hero div div picture").remove();
-  $(".hero div div").append("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;'autoplay controls><source src='movie.mp4' type='video/mp4'></video>");
+  
+  // Create a new video element with autoplay and controls
+  var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay controls></video>");
+  
+  // Set the source of the video element to the GitHub URL
+  newVideoElement.append("<source src='https://raw.githubusercontent.com/ananth94joshi/web-sites/main/Clouds_34_Timelapse.mp4' type='video/mp4'>");
+  
+  // Append the new video element to the div
+  $(".hero div div").append(newVideoElement);
 }
+
+
 
