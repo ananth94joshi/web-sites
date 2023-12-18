@@ -315,6 +315,6 @@ function videoload(newVideoSource) {
 
 // Example: Call videoload with the desired video source URL
 // Replace the URL with your desired video source
-videoload('https://raw.githubusercontent.com/ananth94joshi/web-sites/main/Clouds_34_Timelapse.mp4');
+videoload('https://github.com/ananth94joshi/web-sites/blob/main/test.mp4');
 
 
