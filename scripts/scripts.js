@@ -275,10 +275,5 @@ function updateContainer() {
 function videoload() {
   $(".hero div div picture").remove();
   $(".hero div div").append("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;'autoplay controls><source src='movie.mp4' type='video/mp4'></video>");
-}() {
-  videoload();}
-
-function videoload() {
-  $(".hero div div picture").remove();
-  $(".hero div div").append("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;'autoplay controls><source src='movie.mp4' type='video/mp4'></video>");
 }
+
