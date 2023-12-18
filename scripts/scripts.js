@@ -271,19 +271,18 @@ function updateContainer() {
 }
 
 
+$(document).ready(function() {
+  function videoload() {
+    $(".hero div div video").remove();
 
-function videoload() {
-  // Remove any existing content inside the specified div with the class "hero"
-  $(".hero div div video").remove();
+    var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay loop></video>");
+    newVideoElement.append("<source src='https://raw.githubusercontent.com/ananth94joshi/web-sites/main/Clouds_34_Timelapse.mp4' type='video/mp4'>");
 
-  // Create a new video element with autoplay and without controls
-  var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay loop></video>");
+    $(".hero div div").append(newVideoElement);
+  }
 
-  // Set the source of the video element to the raw GitHub URL
-  newVideoElement.append("<source src='https://github.com/ananth94joshi/web-sites/blob/main/test.mp4' type='video/mp4'>");
-
-  // Append the new video element to the div
-  $(".hero div div").append(newVideoElement);
-}
+  // Call the function to load the video
+  videoload();
+});
 
 
