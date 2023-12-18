@@ -268,4 +268,4 @@ function updateContainer() {
 		FeaturesContainer.appendChild(FeaturesimageMobile);
 	}
 }
-documentgetElementsByClassName.('hero').innerHTML = "Hello welcome to helix";
+document.getElementsByClassName.('hero').innerHTML = "Hello welcome to helix";
