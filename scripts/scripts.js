@@ -299,12 +299,41 @@ function updateContainer() {
 //   $(".hero div div").append(newVideoElement);
 // }
 
+// function videoload(newVideoSource) {
+//   // Remove any existing content inside the specified div with the class "hero"
+//   $(".hero div div picture").remove();
+  
+//   // Create a new video element with autoplay and controls
+//   var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay controls></video>");
+  
+//   // Set the source of the video element to the new video source
+//   newVideoElement.append("<source src='" + newVideoSource + "' type='video/mp4'>");
+  
+//   // Append the new video element to the div
+//   $(".hero div div").append(newVideoElement);
+// }
+
+// // Example: Call videoload with the desired video source URL
+// // Replace the URL with your desired video source
+// videoload('https://github.com/ananth94joshi/web-sites/blob/main/test.mp4');
+
+var isVideoLoaded = false; // Flag to track whether the video is already loaded
+
+// Function to update video source and make it repeat without controls
 function videoload(newVideoSource) {
+  // Check if the video is already loaded, and if so, return
+  if (isVideoLoaded) {
+    return;
+  }
+
+  // Set the flag to true to indicate that the video is loaded
+  isVideoLoaded = true;
+
   // Remove any existing content inside the specified div with the class "hero"
   $(".hero div div picture").remove();
   
-  // Create a new video element with autoplay and controls
-  var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay controls></video>");
+  // Create a new video element with autoplay and without controls
+  var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay loop></video>");
   
   // Set the source of the video element to the new video source
   newVideoElement.append("<source src='" + newVideoSource + "' type='video/mp4'>");
@@ -313,8 +342,8 @@ function videoload(newVideoSource) {
   $(".hero div div").append(newVideoElement);
 }
 
-// Example: Call videoload with the desired video source URL
-// Replace the URL with your desired video source
-videoload('https://github.com/ananth94joshi/web-sites/blob/main/test.mp4');
-
-
+// Example: Call videoload when the document is ready
+$(document).ready(function() {
+  // Replace the URL with your desired video source
+  videoload('https://raw.githubusercontent.com/ananth94joshi/web-sites/main/Clouds_34_Timelapse.mp4');
+});
