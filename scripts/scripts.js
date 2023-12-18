@@ -276,12 +276,14 @@ $(document).ready(function() {
     $(".hero div div video").remove();
 
     var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay loop></video>");
-    newVideoElement.append("<source src='https://github.com/ananth94joshi/web-sites/blob/main/Clouds_34_Timelapse.mp4' type='video/mp4'>");
+    newVideoElement.append("<source src='https://raw.githubusercontent.com/ananth94joshi/web-sites/main/Clouds_34_Timelapse.mp4' type='video/mp4'>");
 
     $(".hero div div").append(newVideoElement);
   }
 
-
+  // Call the function to load the video
+  videoload();
 });
+
 
 
