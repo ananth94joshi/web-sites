@@ -131,7 +131,7 @@ import {
     await loadEager(document);
     await loadLazy(document);
     loadDelayed();
-	    videoload();
+	    
   }
   loadPage();
 //scripts for contact form
@@ -256,7 +256,8 @@ var FeaturesContainer = document.querySelector("body > main > div:nth-child(7) >
 var FeaturesimageMobile = document.querySelector("body > main > div:nth-child(7) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)");
 	
 $(document).ready(function () {
-    updateContainer();
+    videoload();
+	updateContainer();
     $(window).resize(function() {
         updateContainer();
     });
