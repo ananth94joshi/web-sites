@@ -256,6 +256,11 @@ var FeaturesContainer = document.querySelector("body > main > div:nth-child(7) >
 var FeaturesimageMobile = document.querySelector("body > main > div:nth-child(7) > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(2)");
 	
 $(document).ready(function () {
+	function videoload() {
+  $(".hero div div picture").remove();
+  $(".hero div div").append("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay controls src='https://github.com/ananth94joshi/web-sites/blob/main/test.mp4'></video>");
+}
+
     videoload();
 	updateContainer();
     $(window).resize(function() {
@@ -276,7 +281,3 @@ function updateContainer() {
 //   $(".hero div div picture").remove();
 //   $(".hero div div").append("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay controls><source src='https://github.com/ananth94joshi/web-sites/blob/main/test.mp4' type='video/mp4'></video>");
 // }
-function videoload() {
-  $(".hero div div picture").remove();
-  $(".hero div div").append("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay controls src='https://github.com/ananth94joshi/web-sites/blob/main/test.mp4'></video>");
-}
