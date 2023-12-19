@@ -22,3 +22,24 @@ if (clientsElement && targetElement) {
 } else {
     console.log("One or both elements not found.");
 }
+$(document).ready(function() {
+  function videoload() {
+    var videoContainer = $(".hero div div");
+
+    // Log the selected container to the console
+    console.log("Video container:", videoContainer);
+
+    // Remove existing elements inside the container
+    videoContainer.empty();
+
+    // Append the video element with the correct attributes
+    videoContainer.append("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay controls src='https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4'></video>");
+
+    // Log a message to indicate that the video has been appended
+    console.log("Video appended successfully");
+  }
+
+  // Call your function
+  videoload();
+});
+
