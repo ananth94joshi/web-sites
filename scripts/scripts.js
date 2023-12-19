@@ -260,7 +260,7 @@ $(document).ready(function () {
     $(window).resize(function() {
         updateContainer();
     });
-	  videoload('https://github.com/ananth94joshi/web-sites/blob/main/Clouds_34_Timelapse.mp4');
+	  videoload('https://github.com/ananth94joshi/web-sites/blob/main/icons/IMG_8167.MOV');
 });
 function updateContainer() {
     
