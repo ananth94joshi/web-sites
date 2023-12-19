@@ -260,7 +260,7 @@ $(document).ready(function () {
     $(window).resize(function() {
         updateContainer();
     });
-	  videoload('https://github.com/ananth94joshi/web-sites/blob/main/icons/IMG_8167.MOV');
+	  
 });
 function updateContainer() {
     
@@ -271,31 +271,7 @@ function updateContainer() {
 	}
 }
 
-
-var isVideoAppended = false; // Flag to track whether the video is already appended
-
-// Function to update video source and make it repeat without controls
-function videoload(newVideoSource) {
-  // Check if the video is already appended, and if so, return
-  if (isVideoAppended) {
-    return;
-  }
-
-  // Set the flag to true to indicate that the video is appended
-  isVideoAppended = true;
-
-  // Remove any existing content inside the specified div with the class "hero"
+function videoload() {
   $(".hero div div picture").remove();
-  
-  // Create a new video element with autoplay and without controls
-  var newVideoElement = $("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;' autoplay loop></video>");
-  
-  // Set the source of the video element to the new video source
-  newVideoElement.append("<source src='" + newVideoSource + "' type='video/mp4'>");
-  
-  // Append the new video element to the div
-  $(".hero div div").append(newVideoElement);
+  $(".hero div div").append("<video width='100%' height='100%' style='position: absolute; top: 0; left: 0;'autoplay controls><source src='https://github.com/ananth94joshi/web-sites/blob/main/Clouds_34_Timelapse.mp4' type='video/mp4'></video>");
 }
-
-
-
